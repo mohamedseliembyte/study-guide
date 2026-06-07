@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MP4 Final Study Guide</title>
+  <title>Study Guide</title>
   <style>
 
     :root {
@@ -70,6 +70,8 @@
     .subject-btn.bio-active   { background: #c9a84c; color: #000; border-color: #c9a84c; font-weight:700; }
     .subject-btn.islam-active { background: #0D7A55; color: #fff; border-color: #0D7A55; }
     .subject-btn.lotf-active  { background: #BA7517; color: #fff; border-color: #BA7517; }
+    .subject-btn.alg1-active  { background: #1d4ed8; color: #fff; border-color: #1d4ed8; font-weight:700; }
+    .subject-btn.regbio-active{ background: #16a34a; color: #fff; border-color: #16a34a; font-weight:700; }
 
     /* ══════════════════════════════════════
        SUBJECT PANELS — fade in/out
@@ -625,15 +627,15 @@
        ALGEBRA I REVIEW
     ══════════════════════════════════════════════════════════ */
     .alg-header {
-      background: linear-gradient(135deg, #1a1200 0%, #2d2000 100%);
-      border-bottom: 2px solid #C9A84C;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      border-bottom: 2px solid #1d4ed8;
       color: #f0f0f0; padding: 36px 20px; text-align: center;
     }
-    .alg-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #C9A84C; }
+    .alg-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #93c5fd; }
     .alg-header p  { font-size: 13px; opacity: .85; }
     .alg-disclaimer {
-      background: #1a1500; border: 1px solid #C9A84C44;
-      border-left: 4px solid #C9A84C; border-radius: 8px;
+      background: #0f172a; border: 1px solid #1d4ed844;
+      border-left: 4px solid #1d4ed8; border-radius: 8px;
       padding: 10px 14px; margin: 14px 0 0; font-size: 12px; color: #aaa;
     }
     .alg-tab-btn {
@@ -642,8 +644,8 @@
       cursor: pointer; font-size: 13px; font-weight: 500;
       transition: all .2s ease; white-space: nowrap;
     }
-    .alg-tab-btn:hover  { background: #111111; border-color: #C9A84C; color: #C9A84C; }
-    .alg-tab-btn.active { background: #C9A84C; color: #000; border-color: #C9A84C; font-weight: 700; }
+    .alg-tab-btn:hover  { background: #111111; border-color: #1d4ed8; color: #93c5fd; }
+    .alg-tab-btn.active { background: #1d4ed8; color: #fff; border-color: #1d4ed8; font-weight: 700; }
 
     /* Priority badges */
     .pri-badge {
@@ -661,11 +663,11 @@
       background: #141414; border: 1px solid #2a2a2a; border-radius: 10px;
       padding: 14px 16px; transition: border-color .2s;
     }
-    .topic-card:hover { border-color: #C9A84C55; }
+    .topic-card:hover { border-color: #1d4ed855; }
     .topic-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .topic-card-name { font-weight: 700; font-size: 14px; color: #e0e0e0; }
     .topic-know  { font-size: 12px; color: #6b7280; margin-bottom: 6px; line-height: 1.5; }
-    .topic-qtype { font-size: 11px; color: #C9A84C; background: #C9A84C11; padding: 4px 8px; border-radius: 4px; }
+    .topic-qtype { font-size: 11px; color: #3b82f6; background: #3b82f611; padding: 4px 8px; border-radius: 4px; }
 
     /* Formula sheet */
     .formula-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
@@ -673,21 +675,21 @@
       background: #141414; border: 1px solid #2a2a2a; border-radius: 10px;
       padding: 14px; transition: border-color .2s;
     }
-    .formula-card:hover { border-color: #C9A84C66; }
+    .formula-card:hover { border-color: #1d4ed866; }
     .formula-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
     .formula-eq {
       font-family: 'Courier New', monospace; font-size: 14px; font-weight: 700;
-      color: #C9A84C; background: #C9A84C0d; padding: 8px 10px;
+      color: #93c5fd; background: #1d4ed80d; padding: 8px 10px;
       border-radius: 6px; display: block; line-height: 1.7;
     }
 
     /* Vocab */
     .vocab-grid-alg { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
     .vocab-card-alg {
-      background: #141414; border-left: 4px solid #C9A84C; border-radius: 8px;
+      background: #141414; border-left: 4px solid #1d4ed8; border-radius: 8px;
       padding: 12px 14px; cursor: default;
     }
-    .vocab-term-alg { font-weight: 700; font-size: 14px; color: #C9A84C; margin-bottom: 4px; }
+    .vocab-term-alg { font-weight: 700; font-size: 14px; color: #93c5fd; margin-bottom: 4px; }
     .vocab-def-alg  { font-size: 12px; color: #6b7280; line-height: 1.5; }
 
     /* Unit accordion */
@@ -699,13 +701,13 @@
     }
     .unit-header:hover { background: #111111; }
     .unit-header-left { display: flex; align-items: center; gap: 10px; }
-    .unit-num { font-size: 11px; color: #C9A84C; font-weight: 700; text-transform: uppercase; }
+    .unit-num { font-size: 11px; color: #3b82f6; font-weight: 700; text-transform: uppercase; }
     .unit-title { font-weight: 600; font-size: 15px; color: #e0e0e0; }
-    .unit-chevron { color: #C9A84C; font-size: 16px; transition: transform .25s; }
+    .unit-chevron { color: #3b82f6; font-size: 16px; transition: transform .25s; }
     .unit-chevron.open { transform: rotate(180deg); }
     .unit-body { display: none; padding: 16px; background: #0f0f0f; border-top: 1px solid #2a2a2a; }
     .unit-body.open { display: block; }
-    .unit-section-title { font-size: 12px; font-weight: 700; color: #C9A84C; text-transform: uppercase; letter-spacing: .5px; margin: 12px 0 6px; }
+    .unit-section-title { font-size: 12px; font-weight: 700; color: #3b82f6; text-transform: uppercase; letter-spacing: .5px; margin: 12px 0 6px; }
     .unit-section-title:first-child { margin-top: 0; }
     .unit-vocab-chips { display: flex; flex-wrap: wrap; gap: 6px; }
     .unit-chip { background: #111111; border: 1px solid #333; border-radius: 20px; padding: 3px 10px; font-size: 12px; color: #ccc; }
@@ -713,9 +715,9 @@
     .unit-skill-list li { font-size: 13px; color: #bbb; padding: 3px 0 3px 18px; position: relative; }
     .unit-skill-list li:before { content: "✓"; position: absolute; left: 0; color: #C9A84C; font-weight: 700; }
     .unit-example {
-      background: #141414; border-left: 3px solid #C9A84C; border-radius: 6px;
+      background: #141414; border-left: 3px solid #1d4ed8; border-radius: 6px;
       padding: 10px 12px; font-family: 'Courier New', monospace; font-size: 13px;
-      color: #C9A84C; margin-top: 4px; line-height: 1.8;
+      color: #93c5fd; margin-top: 4px; line-height: 1.8;
     }
     .unit-watchout {
       background: #1a0a0a; border-left: 3px solid #ef4444; border-radius: 6px;
@@ -731,9 +733,9 @@
       padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start;
       transition: border-color .2s;
     }
-    .strategy-tip:hover { border-color: #C9A84C44; }
+    .strategy-tip:hover { border-color: #1d4ed844; }
     .strategy-num {
-      background: #C9A84C; color: #000; font-weight: 800; font-size: 13px;
+      background: #1d4ed8; color: #fff; font-weight: 800; font-size: 13px;
       width: 26px; height: 26px; border-radius: 50%; display: flex;
       align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
     }
@@ -752,14 +754,14 @@
     .study-block.sb2:before { background: #fb923c; }
     .study-block.sb3:before { background: #34d399; }
     .study-block.sb4:before { background: #60a5fa; }
-    .study-block.sb5:before { background: #C9A84C; }
-    .study-block-time { font-size: 12px; font-weight: 700; color: #C9A84C; margin-bottom: 8px; }
+    .study-block.sb5:before { background: #1d4ed8; }
+    .study-block-time { font-size: 12px; font-weight: 700; color: #3b82f6; margin-bottom: 8px; }
     .study-block-topics { list-style: none; padding: 0; }
     .study-block-topics li { font-size: 13px; color: #bbb; padding: 2px 0 2px 16px; position: relative; }
-    .study-block-topics li:before { content: "→"; position: absolute; left: 0; color: #C9A84C44; }
+    .study-block-topics li:before { content: "→"; position: absolute; left: 0; color: #3b82f644; }
     .study-motivate {
-      background: #1a1500; border: 1px solid #C9A84C33; border-radius: 10px;
-      padding: 16px; text-align: center; font-size: 14px; color: #C9A84C;
+      background: #0f172a; border: 1px solid #1d4ed833; border-radius: 10px;
+      padding: 16px; text-align: center; font-size: 14px; color: #93c5fd;
       font-style: italic; margin-top: 12px;
     }
 
@@ -785,23 +787,23 @@
       backface-visibility: hidden; -webkit-backface-visibility: hidden;
     }
     .alg-fc-front {
-      background: #141414; border: 2px solid #C9A84C44;
+      background: #141414; border: 2px solid #1d4ed844;
     }
     .alg-fc-back {
-      background: linear-gradient(135deg, #1a1200, #2d2000);
-      border: 2px solid #C9A84C;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      border: 2px solid #1d4ed8;
       transform: rotateY(180deg); -webkit-transform: rotateY(180deg);
     }
     .alg-fc-front-text { font-size: 15px; font-weight: 600; color: #e0e0e0; line-height: 1.5; }
-    .alg-fc-back-text  { font-size: 15px; font-weight: 700; color: #C9A84C; line-height: 1.6; font-family: 'Courier New', monospace; }
+    .alg-fc-back-text  { font-size: 15px; font-weight: 700; color: #93c5fd; line-height: 1.6; font-family: 'Courier New', monospace; }
     .alg-fc-hint { font-size: 11px; color: #9ca3af; margin-top: 8px; }
     .alg-fc-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
     .alg-fc-nav-btn {
       padding: 9px 22px; background: #111111; border: 1px solid #333;
-      border-radius: 30px; color: #C9A84C; font-size: 13px; font-weight: 600;
+      border-radius: 30px; color: #3b82f6; font-size: 13px; font-weight: 600;
       cursor: pointer; transition: all .2s;
     }
-    .alg-fc-nav-btn:hover { background: #1a1a1a; border-color: #C9A84C; }
+    .alg-fc-nav-btn:hover { background: #1a1a1a; border-color: #1d4ed8; }
     .alg-fc-progress {
       display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; margin-top: 14px;
     }
@@ -809,7 +811,7 @@
       width: 8px; height: 8px; border-radius: 50%; background: #1a1a1a;
       cursor: pointer; transition: background .2s;
     }
-    .alg-fc-dot.active { background: #C9A84C; }
+    .alg-fc-dot.active { background: #1d4ed8; }
 
     /* MCQ */
     .quiz-score-bar {
@@ -818,19 +820,19 @@
       justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;
     }
     .quiz-score-label { font-size: 14px; color: #ccc; }
-    .quiz-score-num { font-size: 22px; font-weight: 800; color: #C9A84C; }
+    .quiz-score-num { font-size: 22px; font-weight: 800; color: #3b82f6; }
     .quiz-reset-btn {
-      padding: 8px 18px; background: transparent; border: 1px solid #C9A84C;
-      border-radius: 30px; color: #C9A84C; font-size: 13px; font-weight: 600;
+      padding: 8px 18px; background: transparent; border: 1px solid #1d4ed8;
+      border-radius: 30px; color: #3b82f6; font-size: 13px; font-weight: 600;
       cursor: pointer; transition: all .2s;
     }
-    .quiz-reset-btn:hover { background: #C9A84C; color: #000; }
+    .quiz-reset-btn:hover { background: #1d4ed8; color: #fff; }
     .mcq-item {
       background: #141414; border: 1px solid #2a2a2a; border-radius: 10px;
       padding: 16px; margin-bottom: 12px;
     }
     .mcq-q { font-size: 14px; font-weight: 600; color: #e0e0e0; margin-bottom: 12px; line-height: 1.5; }
-    .mcq-q-num { color: #C9A84C; }
+    .mcq-q-num { color: #3b82f6; }
     .mcq-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 420px) { .mcq-choices { grid-template-columns: 1fr; } }
     .mcq-choice {
@@ -838,13 +840,13 @@
       padding: 10px 12px; cursor: pointer; font-size: 13px; color: #ccc;
       transition: all .2s; text-align: left;
     }
-    .mcq-choice:hover:not([disabled]) { border-color: #C9A84C; color: #f0f0f0; }
+    .mcq-choice:hover:not([disabled]) { border-color: #1d4ed8; color: #f0f0f0; }
     .mcq-choice.correct { background: #0f1a0a; border-color: #22c55e; color: #4ade80; }
     .mcq-choice.wrong   { background: #1a0a0a; border-color: #ef4444; color: #f87171; }
     .mcq-choice.reveal  { background: #0f1a0a; border-color: #22c55e; color: #4ade80; opacity: .7; }
     .mcq-explain {
-      margin-top: 10px; padding: 10px 12px; background: #0d0d0d;
-      border-left: 3px solid #C9A84C; border-radius: 6px;
+      margin-top: 10px; padding: 10px 12px; background: #0f172a;
+      border-left: 3px solid #1d4ed8; border-radius: 6px;
       font-size: 13px; color: #aaa; display: none;
     }
     .mcq-explain.show { display: block; }
@@ -855,17 +857,17 @@
       padding: 16px; margin-bottom: 10px;
     }
     .sa-q   { font-size: 14px; color: #e0e0e0; margin-bottom: 10px; line-height: 1.5; }
-    .sa-num { color: #C9A84C; font-weight: 700; }
+    .sa-num { color: #3b82f6; font-weight: 700; }
     .sa-reveal-btn {
-      padding: 7px 16px; background: transparent; border: 1px solid #C9A84C44;
-      border-radius: 20px; color: #C9A84C; font-size: 12px; font-weight: 600;
+      padding: 7px 16px; background: transparent; border: 1px solid #1d4ed844;
+      border-radius: 20px; color: #3b82f6; font-size: 12px; font-weight: 600;
       cursor: pointer; transition: all .2s;
     }
-    .sa-reveal-btn:hover { background: #C9A84C22; }
+    .sa-reveal-btn:hover { background: #1d4ed822; }
     .sa-answer {
       display: none; margin-top: 10px; padding: 10px 12px;
-      background: #0d0d0d; border-left: 3px solid #C9A84C; border-radius: 6px;
-      font-family: 'Courier New', monospace; font-size: 14px; color: #C9A84C;
+      background: #0f172a; border-left: 3px solid #1d4ed8; border-radius: 6px;
+      font-family: 'Courier New', monospace; font-size: 14px; color: #93c5fd;
     }
     .sa-answer.show { display: block; }
 
@@ -880,24 +882,24 @@
       border: 1px solid #2a2a2a; border-radius: 8px; padding: 12px 14px;
       cursor: pointer; transition: border-color .2s; user-select: none;
     }
-    .check-item:hover { border-color: #C9A84C44; }
-    .check-item.checked { border-color: #C9A84C55; background: #1a1500; }
+    .check-item:hover { border-color: #1d4ed844; }
+    .check-item.checked { border-color: #1d4ed855; background: #0f172a; }
     .check-box {
       width: 20px; height: 20px; border: 2px solid #333; border-radius: 5px;
       flex-shrink: 0; display: flex; align-items: center; justify-content: center;
       transition: all .2s; margin-top: 1px;
     }
-    .check-item.checked .check-box { background: #C9A84C; border-color: #C9A84C; }
+    .check-item.checked .check-box { background: #1d4ed8; border-color: #1d4ed8; }
     .check-tick { color: #000; font-size: 13px; font-weight: 800; display: none; }
     .check-item.checked .check-tick { display: block; }
     .check-label { font-size: 13px; color: #bbb; line-height: 1.4; }
-    .check-item.checked .check-label { color: #C9A84C; }
+    .check-item.checked .check-label { color: #93c5fd; }
 
     /* Section headers within alg */
     .alg-section-title {
-      font-size: 18px; font-weight: 700; color: #C9A84C;
+      font-size: 18px; font-weight: 700; color: #3b82f6;
       margin: 0 0 16px; padding-bottom: 8px;
-      border-bottom: 2px solid #C9A84C33;
+      border-bottom: 2px solid #1d4ed833;
       display: flex; align-items: center; gap: 8px;
     }
 
@@ -1102,6 +1104,129 @@
     }
     .isl-reset-btn:hover { background:#0D7A55; color:#fff; }
 
+
+    /* ══ REGENTS BIOLOGY (Living Environment) ══ */
+    .regbio-header {
+      background: linear-gradient(135deg, #052e16 0%, #14532d 100%);
+      border-bottom: 2px solid #16a34a; color: white;
+      padding: 36px 20px; text-align: center;
+    }
+    .regbio-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #86efac; }
+    .regbio-header p  { font-size: 13px; opacity: .85; }
+    .regbio-disclaimer {
+      background: #052e16; border: 1px solid #16a34a44;
+      border-left: 4px solid #16a34a; border-radius: 8px;
+      padding: 10px 14px; margin: 14px 0 0; font-size: 12px; color: #aaa;
+    }
+    .regbio-tab-btn {
+      padding: 10px 18px; border: 1px solid #2a2a2a;
+      background: #111111; color: #9ca3af; border-radius: 6px;
+      cursor: pointer; font-size: 13px; font-weight: 500;
+      transition: all .2s; white-space: nowrap;
+    }
+    .regbio-tab-btn:hover  { background: #111111; border-color: #16a34a; color: #86efac; }
+    .regbio-tab-btn.active { background: #16a34a; color: #fff; border-color: #16a34a; font-weight: 700; }
+    .rb-section-title {
+      font-size: 18px; font-weight: 700; color: #4ade80;
+      margin: 0 0 16px; padding-bottom: 8px;
+      border-bottom: 2px solid #16a34a33;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .rb-topics-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 12px; }
+    .rb-topic-card {
+      background: #111111; border: 1px solid #1a1a1a; border-radius: 10px;
+      padding: 14px 16px; transition: border-color .2s;
+    }
+    .rb-topic-card:hover { border-color: #16a34a55; }
+    .rb-topic-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .rb-topic-name { font-weight: 700; font-size: 14px; color: #e5e7eb; }
+    .rb-know  { font-size: 12px; color: #9ca3af; margin-bottom: 6px; line-height: 1.5; }
+    .rb-qtype-tag { font-size: 11px; color: #16a34a; background: #16a34a11; padding: 4px 8px; border-radius: 4px; }
+    .pri-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; flex-shrink:0; }
+    .pri-vh { background: #7c3aed22; color: #a78bfa; border: 1px solid #7c3aed44; }
+    .pri-h  { background: #b4530722; color: #fb923c; border: 1px solid #b4530744; }
+    .pri-m  { background: #16a34a22; color: #4ade80; border: 1px solid #16a34a44; }
+    .pri-s  { background: #22222222; color: #666; border: 1px solid #33333344; }
+    .rb-exam-format-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); gap: 10px; margin-bottom: 20px; }
+    .rb-exam-part { background: #111111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 14px; border-top: 3px solid #16a34a; text-align: center; }
+    .rb-exam-part.high { border-top-color: #f59e0b; }
+    .rb-exam-part-name { font-size: 13px; font-weight: 700; color: #e5e7eb; margin-bottom: 4px; }
+    .rb-exam-part-detail { font-size: 12px; color: #9ca3af; }
+    .rb-tips-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 10px; }
+    .rb-tip { background: #111111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 14px; display: flex; gap: 12px; align-items: flex-start; }
+    .rb-tip-num { background: #16a34a; color: #fff; font-weight: 800; font-size: 13px; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .rb-tip-text { font-size: 13px; color: #ccc; line-height: 1.5; }
+    .rb-formula-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 10px; }
+    .rb-formula-card { background: #111111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 14px; transition: border-color .2s; }
+    .rb-formula-card:hover { border-color: #16a34a66; }
+    .rb-formula-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+    .rb-formula-eq { font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700; color: #86efac; background: #16a34a0d; padding: 8px 10px; border-radius: 6px; display: block; line-height: 1.7; }
+    .rb-vocab-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 10px; }
+    .rb-vocab-card { background: #111111; border-left: 4px solid #16a34a; border-radius: 8px; padding: 12px 14px; }
+    .rb-vocab-term { font-weight: 700; font-size: 14px; color: #86efac; margin-bottom: 4px; }
+    .rb-vocab-def  { font-size: 12px; color: #6b7280; line-height: 1.5; }
+    .rb-unit-item { border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+    .rb-unit-header { background: #141414; padding: 14px 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background .2s; }
+    .rb-unit-header:hover { background: #111111; }
+    .rb-unit-left { display: flex; align-items: center; gap: 10px; }
+    .rb-unit-num   { font-size: 11px; color: #16a34a; font-weight: 700; text-transform: uppercase; }
+    .rb-unit-title { font-weight: 600; font-size: 15px; color: #e5e7eb; }
+    .rb-unit-chev  { color: #16a34a; font-size: 16px; transition: transform .25s; }
+    .rb-unit-chev.open { transform: rotate(180deg); }
+    .rb-unit-body  { display: none; padding: 16px; background: #0a0d0b; border-top: 1px solid #1a1a1a; }
+    .rb-unit-body.open { display: block; }
+    .rb-sec-lbl { font-size: 12px; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: .5px; margin: 12px 0 6px; border-bottom: 1px solid #16a34a30; padding-bottom: 3px; }
+    .rb-sec-lbl:first-child { margin-top: 0; }
+    .rb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .rb-chip { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 20px; padding: 3px 10px; font-size: 12px; color: #ccc; }
+    .rb-skills { list-style: none; padding: 0; }
+    .rb-skills li { font-size: 13px; color: #bbb; padding: 3px 0 3px 18px; position: relative; }
+    .rb-skills li:before { content:"\2713"; position:absolute; left:0; color:#16a34a; font-weight:700; }
+    .rb-qtype-lbl { font-size: 12px; color: #6b7280; font-style: italic; }
+    .rb-example { background: #141414; border-left: 3px solid #16a34a; border-radius: 6px; padding: 10px 12px; font-family: 'Courier New', monospace; font-size: 13px; color: #86efac; margin-top: 4px; line-height: 1.8; }
+    .rb-watchout { background: #1a0e00; border-left: 3px solid #f59e0b; border-radius: 6px; padding: 10px 12px; font-size: 13px; color: #fcd34d; margin-top: 4px; }
+    .rb-fc-wrapper { max-width: 480px; margin: 0 auto; }
+    .rb-fc-counter { text-align: center; font-size: 13px; color: #888; margin-bottom: 12px; }
+    .rb-fc-scene { width: 100%; height: 180px; perspective: 1000px; -webkit-perspective: 1000px; cursor: pointer; margin-bottom: 16px; }
+    .rb-fc-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transition: transform .55s ease; -webkit-transition: -webkit-transform .55s ease; }
+    .rb-fc-inner.flipped { transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+    .rb-fc-front, .rb-fc-back { position: absolute; inset: 0; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 20px; text-align: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .rb-fc-front { background: #141414; border: 2px solid #16a34a44; }
+    .rb-fc-back  { background: linear-gradient(135deg, #052e16, #14532d); border: 2px solid #16a34a; transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+    .rb-fc-front-text { font-size: 15px; font-weight: 600; color: #e0e0e0; line-height: 1.5; }
+    .rb-fc-back-text  { font-size: 15px; font-weight: 700; color: #86efac; line-height: 1.6; }
+    .rb-fc-hint  { font-size: 11px; color: #9ca3af; margin-top: 8px; }
+    .rb-fc-nav   { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .rb-fc-nav-btn { padding: 9px 22px; background: #111111; border: 1px solid #333; border-radius: 30px; color: #16a34a; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .rb-fc-nav-btn:hover { background: #1a1a1a; border-color: #16a34a; }
+    .rb-fc-progress { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; margin-top: 14px; }
+    .rb-fc-dot { width: 8px; height: 8px; border-radius: 50%; background: #1a1a1a; cursor: pointer; transition: background .2s; }
+    .rb-fc-dot.active { background: #16a34a; }
+    .rb-score-bar { background: #141414; border: 1px solid #2a2a2a; border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+    .rb-score-label { font-size: 14px; color: #ccc; }
+    .rb-score-num { font-size: 22px; font-weight: 800; color: #16a34a; }
+    .rb-reset-btn { padding: 8px 18px; background: transparent; border: 1px solid #16a34a; border-radius: 30px; color: #16a34a; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .rb-reset-btn:hover { background: #16a34a; color: #fff; }
+    .rb-mcq-item { background: #141414; border: 1px solid #2a2a2a; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+    .rb-mcq-q { font-size: 14px; font-weight: 600; color: #e0e0e0; margin-bottom: 12px; line-height: 1.5; }
+    .rb-mcq-num { color: #16a34a; }
+    .rb-mcq-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    @media(max-width:420px){ .rb-mcq-choices { grid-template-columns: 1fr; } }
+    .rb-mcq-choice { background: #111111; border: 2px solid #2a2a2a; border-radius: 8px; padding: 10px 12px; cursor: pointer; font-size: 13px; color: #ccc; transition: all .2s; text-align: left; }
+    .rb-mcq-choice:hover:not([disabled]) { border-color: #16a34a; color: #f0f0f0; }
+    .rb-mcq-choice.correct { background: #052e16; border-color: #22c55e; color: #4ade80; }
+    .rb-mcq-choice.wrong   { background: #1a0a0a; border-color: #ef4444; color: #f87171; }
+    .rb-mcq-choice.reveal  { background: #052e16; border-color: #22c55e; color: #4ade80; opacity:.7; }
+    .rb-mcq-exp { margin-top: 10px; padding: 10px 12px; background: #0a0d0b; border-left: 3px solid #16a34a; border-radius: 6px; font-size: 13px; color: #aaa; display: none; }
+    .rb-mcq-exp.show { display: block; }
+    .rb-sa-item { background: #141414; border: 1px solid #2a2a2a; border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+    .rb-sa-q   { font-size: 14px; color: #e0e0e0; margin-bottom: 10px; line-height: 1.5; }
+    .rb-sa-num { color: #16a34a; font-weight: 700; }
+    .rb-sa-btn { padding: 7px 16px; background: transparent; border: 1px solid #16a34a44; border-radius: 20px; color: #16a34a; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .rb-sa-btn:hover { background: #16a34a22; }
+    .rb-sa-ans { display: none; margin-top: 10px; padding: 10px 12px; background: #0a0d0b; border-left: 3px solid #16a34a; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; color: #86efac; }
+    .rb-sa-ans.show { display: block; }
+
   </style>
 </head>
 <body>
@@ -1119,7 +1244,8 @@
       <button class="subject-btn bio-active"  id="btn-bio"   onclick="switchSubject('bio')">🧬 Biology</button>
       <button class="subject-btn"             id="btn-islam" onclick="switchSubject('islam')">☪️ Islamic Studies</button>
       <button class="subject-btn"             id="btn-lotf"  onclick="switchSubject('lotf')">📖 Lord of the Flies</button>
-      <button class="subject-btn"             id="btn-alg1"  onclick="switchSubject('alg1')">📐 Algebra I</button>
+      <button class="subject-btn"             id="btn-regbio" onclick="switchSubject('regbio')">🔬 Regents Bio</button>
+      <button class="subject-btn"             id="btn-alg1"  onclick="switchSubject('alg1')">📊 Regents Algebra</button>
     </div>
   </div>
   <button class="subject-show-tab" id="subject-show-tab" onclick="showSubjectBar()">▼ show subjects</button>
@@ -2233,8 +2359,8 @@
 ═══════════════════════════════════════════════════════════ -->
 <div id="subject-alg1" class="subject-panel">
   <div class="alg-header">
-    <h1>📐 Algebra I Final Review</h1>
-    <p>N-Gen Math Algebra I · Units 1–10 · Regents-Style Prep</p>
+    <h1>📊 Regents Algebra 1</h1>
+    <p>NY Regents Algebra 1 Exam Prep · Parts I–IV · All Units</p>
     <div class="alg-disclaimer">⚠️ This review is based on common Algebra I Regents-style topics. It does not guarantee exact final exam questions.</div>
   </div>
 
@@ -3084,7 +3210,7 @@
 
   function switchSubject(sub) {
     document.querySelectorAll('.subject-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('bio-active','islam-active','lotf-active'));
+    document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('bio-active','islam-active','lotf-active','alg1-active','regbio-active'));
     document.getElementById('subject-' + sub).classList.add('active');
     document.getElementById('btn-' + sub).classList.add(sub + '-active');
     currentSubject = sub;
@@ -3724,6 +3850,136 @@
   }
 
 </script>
+
+<!-- REGENTS BIOLOGY PANEL -->
+<div id="subject-regbio" class="subject-panel">
+  <div class="regbio-header">
+    <h1>&#128300; NY Regents Biology</h1>
+    <p>Living Environment &middot; NYS Regents Exam Prep &middot; All Major Units</p>
+    <div class="regbio-disclaimer">&#9888;&#65039; Covers core topics on the NY Living Environment Regents. Always verify with your teacher&#39;s review sheet.</div>
+  </div>
+  <div class="container">
+    <div class="tab-nav">
+      <button class="regbio-tab-btn active" onclick="switchTab('regbio','rbtopics',this)">&#128203; Topics</button>
+      <button class="regbio-tab-btn" onclick="switchTab('regbio','rbformulas',this)">&#129514; Formulas</button>
+      <button class="regbio-tab-btn" onclick="switchTab('regbio','rbvocab',this)">&#128218; Vocab</button>
+      <button class="regbio-tab-btn" onclick="switchTab('regbio','rbunits',this)">&#128218; Units</button>
+      <button class="regbio-tab-btn" onclick="switchTab('regbio','rbflashcards',this)">&#127183; Flashcards</button>
+      <button class="regbio-tab-btn" onclick="switchTab('regbio','rbpractice',this)">&#9999;&#65039; Practice</button>
+    </div>
+    <div class="tab-content active" id="regbio-rbtopics">
+      <h2 class="rb-section-title">&#128202; Most Likely Regents Topics</h2>
+      <div class="rb-topics-grid"><div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-vh">Very High</span><span class="rb-topic-name">Homeostasis & Feedback</span></div><div class="rb-know">📘 Negative/positive feedback, blood sugar, body temp control</div><div class="rb-qtype-tag">🎯 Describe how a feedback mechanism maintains homeostasis</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-vh">Very High</span><span class="rb-topic-name">Cell Biology</span></div><div class="rb-know">📘 Organelles, cell membrane, diffusion, osmosis, active transport</div><div class="rb-qtype-tag">🎯 Label an organelle diagram; explain transport across membranes</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-vh">Very High</span><span class="rb-topic-name">Genetics</span></div><div class="rb-know">📘 DNA, base pairing, protein synthesis, Punnett squares, mutations</div><div class="rb-qtype-tag">🎯 Predict offspring ratios; interpret a Punnett square</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-vh">Very High</span><span class="rb-topic-name">Ecology & Food Webs</span></div><div class="rb-know">📘 Food webs, energy flow 10% rule, producers/consumers, biotic/abiotic</div><div class="rb-qtype-tag">🎯 Trace energy through a food web; calculate energy at each level</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-h">High</span><span class="rb-topic-name">Evolution & Natural Selection</span></div><div class="rb-know">📘 Natural selection, adaptations, variation, fossil record, common ancestry</div><div class="rb-qtype-tag">🎯 Explain why a trait becomes more common over generations</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-h">High</span><span class="rb-topic-name">Photosynthesis & Respiration</span></div><div class="rb-know">📘 Equations, inputs/outputs, ATP, chloroplast vs mitochondria</div><div class="rb-qtype-tag">🎯 Complete or interpret a photosynthesis/respiration equation</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-h">High</span><span class="rb-topic-name">Human Impact on Ecosystems</span></div><div class="rb-know">📘 Pollution, biodiversity loss, invasive species, climate change</div><div class="rb-qtype-tag">🎯 Analyze data showing human impact on an ecosystem</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-m">Medium</span><span class="rb-topic-name">Lab Skills</span></div><div class="rb-know">📘 Variables, graphing, control group, experimental design</div><div class="rb-qtype-tag">🎯 Identify variables; interpret a graph</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-m">Medium</span><span class="rb-topic-name">Immune System</span></div><div class="rb-know">📘 Antibodies, pathogens, vaccines, white blood cells</div><div class="rb-qtype-tag">🎯 Explain how vaccines prevent disease</div></div>
+<div class="rb-topic-card"><div class="rb-topic-hdr"><span class="pri-badge pri-s">Skip</span><span class="rb-topic-name">Detailed Biochemistry</span></div><div class="rb-know">📘 Complex biochemistry beyond photosynthesis/respiration equations</div><div class="rb-qtype-tag">🎯 Rarely tested in depth on the Living Environment Regents</div></div>
+</div>
+      <h2 class="rb-section-title" style="margin-top:24px">&#127919; Exam Format</h2>
+      <div class="rb-exam-format-grid">
+        <div class="rb-exam-part"><div class="rb-exam-part-name">Part A</div><div class="rb-exam-part-detail">30 MC &middot; 30 pts</div></div>
+        <div class="rb-exam-part"><div class="rb-exam-part-name">Part B-1</div><div class="rb-exam-part-detail">MC + short answer</div></div>
+        <div class="rb-exam-part"><div class="rb-exam-part-name">Part B-2</div><div class="rb-exam-part-detail">Constructed response</div></div>
+        <div class="rb-exam-part high"><div class="rb-exam-part-name">Part C</div><div class="rb-exam-part-detail">Extended response</div></div>
+        <div class="rb-exam-part high"><div class="rb-exam-part-name">Part D</div><div class="rb-exam-part-detail">Lab-based questions</div></div>
+      </div>
+      <h2 class="rb-section-title" style="margin-top:24px">&#128161; Test-Taking Tips</h2>
+      <div class="rb-tips-grid"><div class="rb-tip"><div class="rb-tip-num">1</div><div class="rb-tip-text">Read every question TWICE — the Regents loves tricky wording.</div></div><div class="rb-tip"><div class="rb-tip-num">2</div><div class="rb-tip-text">For graph/data questions, read the axis labels BEFORE the question.</div></div><div class="rb-tip"><div class="rb-tip-num">3</div><div class="rb-tip-text">For food web questions, trace energy from SUN to producer to each consumer.</div></div><div class="rb-tip"><div class="rb-tip-num">4</div><div class="rb-tip-text">For genetics questions, write out the Punnett square even if it seems easy.</div></div><div class="rb-tip"><div class="rb-tip-num">5</div><div class="rb-tip-text">For feedback questions: what changed? What did the body do to REVERSE it?</div></div><div class="rb-tip"><div class="rb-tip-num">6</div><div class="rb-tip-text">When asked to "explain," always include a CAUSE and an EFFECT.</div></div><div class="rb-tip"><div class="rb-tip-num">7</div><div class="rb-tip-text">For multi-part questions, answer EVERY part — partial credit counts.</div></div><div class="rb-tip"><div class="rb-tip-num">8</div><div class="rb-tip-text">Eliminate obviously wrong choices first in multiple choice.</div></div><div class="rb-tip"><div class="rb-tip-num">9</div><div class="rb-tip-text">For lab questions: independent = what you change, dependent = what you measure.</div></div><div class="rb-tip"><div class="rb-tip-num">10</div><div class="rb-tip-text">Show all work and label your Punnett squares clearly.</div></div></div>
+    </div>
+    <div class="tab-content" id="regbio-rbformulas">
+      <h2 class="rb-section-title">&#129514; Key Equations &amp; Rules</h2>
+      <div class="rb-formula-grid"><div class="rb-formula-card"><div class="rb-formula-label">Photosynthesis</div><code class="rb-formula-eq">6CO2 + 6H2O + light --&gt; C6H12O6 + 6O2&lt;br&gt;(occurs in chloroplast)</code></div>
+<div class="rb-formula-card"><div class="rb-formula-label">Cellular Respiration</div><code class="rb-formula-eq">C6H12O6 + 6O2 --&gt; 6CO2 + 6H2O + ATP&lt;br&gt;(occurs in mitochondria)</code></div>
+<div class="rb-formula-card"><div class="rb-formula-label">DNA Base Pairs</div><code class="rb-formula-eq">A pairs with T&lt;br&gt;G pairs with C</code></div>
+<div class="rb-formula-card"><div class="rb-formula-label">RNA Transcription</div><code class="rb-formula-eq">DNA: A--&gt;RNA:U  T--&gt;A  C--&gt;G  G--&gt;C</code></div>
+<div class="rb-formula-card"><div class="rb-formula-label">10% Energy Rule</div><code class="rb-formula-eq">Next level energy = current x 10%&lt;br&gt;(90% lost as heat)</code></div>
+<div class="rb-formula-card"><div class="rb-formula-label">Punnett Ratios</div><code class="rb-formula-eq">Tt x Tt = 3:1 dominant&lt;br&gt;Tt x tt = 1:1</code></div>
+</div>
+    </div>
+    <div class="tab-content" id="regbio-rbvocab">
+      <h2 class="rb-section-title">&#128218; Key Vocabulary</h2>
+      <div class="rb-vocab-grid"><div class="rb-vocab-card"><div class="rb-vocab-term">Homeostasis</div><div class="rb-vocab-def">Maintaining a stable internal environment despite external changes.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Negative Feedback</div><div class="rb-vocab-def">A response that reverses a change to restore balance (most common).</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Positive Feedback</div><div class="rb-vocab-def">A response that amplifies a change (e.g. childbirth).</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Diffusion</div><div class="rb-vocab-def">Movement of molecules from high to low concentration (no ATP needed).</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Osmosis</div><div class="rb-vocab-def">Diffusion of WATER across a semi-permeable membrane.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Active Transport</div><div class="rb-vocab-def">Movement against concentration gradient — requires ATP.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Photosynthesis</div><div class="rb-vocab-def">Plants use light to convert CO2 + H2O into glucose + O2.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Cellular Respiration</div><div class="rb-vocab-def">Cells release ATP energy from glucose using O2.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">DNA</div><div class="rb-vocab-def">Double-stranded molecule carrying genetic info (A-T, G-C base pairs).</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Gene</div><div class="rb-vocab-def">Segment of DNA coding for a specific protein.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Mutation</div><div class="rb-vocab-def">Change in DNA sequence — can be beneficial, harmful, or neutral.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Protein Synthesis</div><div class="rb-vocab-def">Transcription (DNA to mRNA) + Translation (mRNA to protein at ribosome).</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Dominant</div><div class="rb-vocab-def">Allele expressed over a recessive allele.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Recessive</div><div class="rb-vocab-def">Allele expressed only when two copies are present.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Natural Selection</div><div class="rb-vocab-def">Organisms with favorable traits survive and reproduce more.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Adaptation</div><div class="rb-vocab-def">A trait that increases survival fitness in an environment.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Producer</div><div class="rb-vocab-def">Makes its own food (plants, algae) — most energy in food web.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Consumer</div><div class="rb-vocab-def">Gets energy by eating other organisms.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Decomposer</div><div class="rb-vocab-def">Breaks down dead matter, recycling nutrients.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Biodiversity</div><div class="rb-vocab-def">Variety of life in an area. Higher biodiversity = more stable ecosystem.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Antibody</div><div class="rb-vocab-def">Protein made by immune system to fight a specific pathogen.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Vaccine</div><div class="rb-vocab-def">Stimulates immunity without causing disease.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">Enzyme</div><div class="rb-vocab-def">Biological catalyst that speeds up reactions without being consumed.</div></div>
+<div class="rb-vocab-card"><div class="rb-vocab-term">ATP</div><div class="rb-vocab-def">Adenosine triphosphate — the cell's energy currency.</div></div>
+</div>
+    </div>
+    <div class="tab-content" id="regbio-rbunits">
+      <h2 class="rb-section-title">&#128218; Unit-by-Unit Study Guide</h2>
+      <p style="font-size:13px;color:#9ca3af;margin-bottom:14px;">Tap any unit to expand.</p>
+      <div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(0)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 1</span><span class="rb-unit-title">Cell Biology & Transport</span></div><span class="rb-unit-chev" id="rb-uchev-0">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-0"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">cell membrane</span><span class="rb-chip">nucleus</span><span class="rb-chip">mitochondria</span><span class="rb-chip">ribosome</span><span class="rb-chip">chloroplast</span><span class="rb-chip">diffusion</span><span class="rb-chip">osmosis</span><span class="rb-chip">active transport</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Identify organelle functions: nucleus=DNA, mitochondria=ATP, ribosome=protein, chloroplast=photosynthesis</li><li>Explain diffusion and osmosis (high to low concentration, passive, no ATP)</li><li>Distinguish passive transport vs active transport (ATP required)</li><li>Describe the cell membrane as selectively permeable</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Label an organelle diagram · Predict osmosis direction · Compare transport types</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">A cell in salt water loses water by osmosis<br>(water moves OUT, toward higher salt concentration outside).</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Osmosis is movement of WATER, not solutes.<br>Water moves from LOW solute to HIGH solute concentration.</div></div></div>
+<div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(1)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 2</span><span class="rb-unit-title">Photosynthesis & Respiration</span></div><span class="rb-unit-chev" id="rb-uchev-1">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-1"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">photosynthesis</span><span class="rb-chip">cellular respiration</span><span class="rb-chip">chloroplast</span><span class="rb-chip">mitochondria</span><span class="rb-chip">ATP</span><span class="rb-chip">glucose</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Write and interpret the photosynthesis equation (CO2 + H2O + light gives glucose + O2)</li><li>Write and interpret the respiration equation (glucose + O2 gives CO2 + H2O + ATP)</li><li>Know where each process occurs: chloroplast for photosynthesis, mitochondria for respiration</li><li>Plants do BOTH photosynthesis AND respiration — photosynthesis uses light</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Complete a reaction equation · Identify inputs/outputs · Compare the two processes</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">Photosynthesis:  6CO2 + 6H2O + light --> C6H12O6 + 6O2<br>Respiration:     C6H12O6 + 6O2 --> 6CO2 + 6H2O + ATP</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Plants do BOTH photosynthesis AND respiration.<br>They do NOT only photosynthesize — respiration happens in ALL cells.</div></div></div>
+<div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(2)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 3</span><span class="rb-unit-title">Genetics & DNA</span></div><span class="rb-unit-chev" id="rb-uchev-2">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-2"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">DNA</span><span class="rb-chip">gene</span><span class="rb-chip">allele</span><span class="rb-chip">dominant</span><span class="rb-chip">recessive</span><span class="rb-chip">Punnett square</span><span class="rb-chip">mutation</span><span class="rb-chip">transcription</span><span class="rb-chip">translation</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Describe DNA structure: double helix, A-T and G-C base pairs</li><li>Set up and solve a Punnett square for simple crosses</li><li>Explain transcription (DNA to mRNA) and translation (mRNA to protein)</li><li>Identify types of mutations and their possible effects</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Punnett square ratio · Predict phenotypes · Interpret a pedigree · Match base pairs</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">Tt x Tt cross:<br>TT (25%) = tall,  Tt (50%) = tall,  tt (25%) = short<br>Phenotype ratio: 3 tall : 1 short</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Genotype = allele combo (Tt). Phenotype = observable trait (tall).<br>A dominant allele MASKS a recessive one.</div></div></div>
+<div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(3)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 4</span><span class="rb-unit-title">Evolution & Natural Selection</span></div><span class="rb-unit-chev" id="rb-uchev-3">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-3"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">natural selection</span><span class="rb-chip">adaptation</span><span class="rb-chip">variation</span><span class="rb-chip">fitness</span><span class="rb-chip">fossil record</span><span class="rb-chip">common ancestry</span><span class="rb-chip">extinction</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Explain the 4 steps: variation, selection pressure, survival, reproduction</li><li>Give examples of adaptations and why they are favored by selection</li><li>Use fossil record and homologous structures as evidence for evolution</li><li>Explain how new species can form over long time periods</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Explain why a trait becomes more common · Analyze population change data · Identify evidence of evolution</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">Green beetles survive better on green leaves.<br>Over generations, green beetles become MORE COMMON.<br>This is natural selection in action.</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Evolution acts on POPULATIONS, not individual organisms.<br>An individual does not evolve — populations do over many generations.</div></div></div>
+<div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(4)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 5</span><span class="rb-unit-title">Ecology & Human Impact</span></div><span class="rb-unit-chev" id="rb-uchev-4">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-4"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">producer</span><span class="rb-chip">consumer</span><span class="rb-chip">decomposer</span><span class="rb-chip">food web</span><span class="rb-chip">energy pyramid</span><span class="rb-chip">biotic</span><span class="rb-chip">abiotic</span><span class="rb-chip">biodiversity</span><span class="rb-chip">carrying capacity</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Trace energy flow: sun to producer to primary consumer to secondary consumer</li><li>Apply the 10% rule: only 10% of energy passes to the next level</li><li>Distinguish biotic (living) and abiotic (non-living) factors</li><li>Explain human impacts: pollution, deforestation, invasive species, climate change</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Trace energy through a food web · Calculate energy at each level · Explain impact of removing a species</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">Grass has 10,000 kcal:<br>Rabbits get 1,000 kcal (10%)<br>Foxes get 100 kcal (10% of rabbits)<br>90% is lost as heat at each level.</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Producers have the MOST energy; top predators have the LEAST.<br>Energy is LOST as heat at each level — it does NOT transfer 100%.</div></div></div>
+<div class="rb-unit-item"><div class="rb-unit-header" onclick="rbToggleUnit(5)"><div class="rb-unit-left"><span class="rb-unit-num">Unit 6</span><span class="rb-unit-title">Homeostasis & Body Systems</span></div><span class="rb-unit-chev" id="rb-uchev-5">&#9662;</span></div><div class="rb-unit-body" id="rb-ubody-5"><div class="rb-sec-lbl">Key Vocabulary</div><div class="rb-chips"><span class="rb-chip">homeostasis</span><span class="rb-chip">negative feedback</span><span class="rb-chip">hormone</span><span class="rb-chip">enzyme</span><span class="rb-chip">immune system</span><span class="rb-chip">antibody</span><span class="rb-chip">pathogen</span><span class="rb-chip">vaccine</span></div><div class="rb-sec-lbl">Must-Know Skills</div><ul class="rb-skills"><li>Explain negative feedback: reverses change to restore balance</li><li>Give examples of homeostasis: blood sugar control, body temperature regulation</li><li>Describe how the immune system fights pathogens (white blood cells, antibodies)</li><li>Explain how vaccines create immunity without causing disease</li></ul><div class="rb-sec-lbl">Common Regents Questions</div><div class="rb-qtype-lbl">Describe a feedback loop · Explain why a vaccine prevents disease · Interpret a blood sugar regulation diagram</div><div class="rb-sec-lbl">Quick Example</div><div class="rb-example">Blood sugar rises --> pancreas releases insulin --><br>cells absorb glucose --> blood sugar falls.<br>This is NEGATIVE feedback.</div><div class="rb-sec-lbl">&#9888;&#65039; Watch Out</div><div class="rb-watchout"><strong>Watch out:</strong> Negative feedback does NOT mean bad.<br>It means the body REVERSES the change to restore normal balance.</div></div></div>
+
+    </div>
+    <div class="tab-content" id="regbio-rbflashcards">
+      <h2 class="rb-section-title">&#127183; Flashcards</h2>
+      <p style="font-size:13px;color:#9ca3af;margin-bottom:18px;">Tap to flip &middot; arrows to navigate all 30 cards.</p>
+      <div class="rb-fc-wrapper"><div class="rb-fc-counter" id="rb-fc-counter">Card 1 of 30</div><div class="rb-fc-scene" onclick="rbFlipCard()"><div class="rb-fc-inner" id="rb-fc-inner"><div class="rb-fc-front"><div><div class="rb-fc-front-text" id="rb-fc-front">What is homeostasis?</div><div class="rb-fc-hint">Tap to flip</div></div></div><div class="rb-fc-back"><div class="rb-fc-back-text" id="rb-fc-back">Maintaining a stable internal environment despite external changes.</div></div></div></div><div class="rb-fc-nav"><button class="rb-fc-nav-btn" onclick="rbPrevCard()">&#8592; Prev</button><button class="rb-fc-nav-btn" onclick="rbShuffleCards()">&#128256; Shuffle</button><button class="rb-fc-nav-btn" onclick="rbNextCard()">Next &#8594;</button></div><div class="rb-fc-progress" id="rb-fc-dots"><div class="rb-fc-dot active" onclick="rbGotoCard(0)"></div><div class="rb-fc-dot " onclick="rbGotoCard(1)"></div><div class="rb-fc-dot " onclick="rbGotoCard(2)"></div><div class="rb-fc-dot " onclick="rbGotoCard(3)"></div><div class="rb-fc-dot " onclick="rbGotoCard(4)"></div><div class="rb-fc-dot " onclick="rbGotoCard(5)"></div><div class="rb-fc-dot " onclick="rbGotoCard(6)"></div><div class="rb-fc-dot " onclick="rbGotoCard(7)"></div><div class="rb-fc-dot " onclick="rbGotoCard(8)"></div><div class="rb-fc-dot " onclick="rbGotoCard(9)"></div><div class="rb-fc-dot " onclick="rbGotoCard(10)"></div><div class="rb-fc-dot " onclick="rbGotoCard(11)"></div><div class="rb-fc-dot " onclick="rbGotoCard(12)"></div><div class="rb-fc-dot " onclick="rbGotoCard(13)"></div><div class="rb-fc-dot " onclick="rbGotoCard(14)"></div><div class="rb-fc-dot " onclick="rbGotoCard(15)"></div><div class="rb-fc-dot " onclick="rbGotoCard(16)"></div><div class="rb-fc-dot " onclick="rbGotoCard(17)"></div><div class="rb-fc-dot " onclick="rbGotoCard(18)"></div><div class="rb-fc-dot " onclick="rbGotoCard(19)"></div><div class="rb-fc-dot " onclick="rbGotoCard(20)"></div><div class="rb-fc-dot " onclick="rbGotoCard(21)"></div><div class="rb-fc-dot " onclick="rbGotoCard(22)"></div><div class="rb-fc-dot " onclick="rbGotoCard(23)"></div><div class="rb-fc-dot " onclick="rbGotoCard(24)"></div><div class="rb-fc-dot " onclick="rbGotoCard(25)"></div><div class="rb-fc-dot " onclick="rbGotoCard(26)"></div><div class="rb-fc-dot " onclick="rbGotoCard(27)"></div><div class="rb-fc-dot " onclick="rbGotoCard(28)"></div><div class="rb-fc-dot " onclick="rbGotoCard(29)"></div></div></div>
+    </div>
+    <div class="tab-content" id="regbio-rbpractice">
+      <h2 class="rb-section-title">&#9999;&#65039; Multiple Choice Practice</h2>
+      <div class="rb-score-bar">
+        <div><div class="rb-score-label">Score</div>
+          <div><span class="rb-score-num" id="rb-score">0</span><span style="color:#555;font-size:14px;"> / 15</span></div>
+        </div>
+        <button class="rb-reset-btn" onclick="rbResetQuiz()">&#8635; Reset</button>
+      </div>
+      <div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q1.</span> Which process converts light energy into chemical energy stored in glucose?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-0-A" onclick="rbCheckMCQ(0,'A','C',`Photosynthesis converts light energy + CO2 + H2O into glucose + O2.`)">A. Cellular respiration</button><button class="rb-mcq-choice" id="rb-mcq-0-B" onclick="rbCheckMCQ(0,'B','C',`Photosynthesis converts light energy + CO2 + H2O into glucose + O2.`)">B. Fermentation</button><button class="rb-mcq-choice" id="rb-mcq-0-C" onclick="rbCheckMCQ(0,'C','C',`Photosynthesis converts light energy + CO2 + H2O into glucose + O2.`)">C. Photosynthesis</button><button class="rb-mcq-choice" id="rb-mcq-0-D" onclick="rbCheckMCQ(0,'D','C',`Photosynthesis converts light energy + CO2 + H2O into glucose + O2.`)">D. Transpiration</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-0"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q2.</span> A cell placed in salt water shrinks. This happens because:</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-1-A" onclick="rbCheckMCQ(1,'A','B',`Higher solute outside causes water to move OUT of the cell by osmosis.`)">A. Salt enters the cell</button><button class="rb-mcq-choice" id="rb-mcq-1-B" onclick="rbCheckMCQ(1,'B','B',`Higher solute outside causes water to move OUT of the cell by osmosis.`)">B. Water leaves the cell by osmosis</button><button class="rb-mcq-choice" id="rb-mcq-1-C" onclick="rbCheckMCQ(1,'C','B',`Higher solute outside causes water to move OUT of the cell by osmosis.`)">C. Glucose leaves the cell</button><button class="rb-mcq-choice" id="rb-mcq-1-D" onclick="rbCheckMCQ(1,'D','B',`Higher solute outside causes water to move OUT of the cell by osmosis.`)">D. The cell membrane dissolves</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-1"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q3.</span> Which organelle is the site of protein synthesis?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-2-A" onclick="rbCheckMCQ(2,'A','D',`Ribosomes are where mRNA is translated into proteins.`)">A. Nucleus</button><button class="rb-mcq-choice" id="rb-mcq-2-B" onclick="rbCheckMCQ(2,'B','D',`Ribosomes are where mRNA is translated into proteins.`)">B. Mitochondria</button><button class="rb-mcq-choice" id="rb-mcq-2-C" onclick="rbCheckMCQ(2,'C','D',`Ribosomes are where mRNA is translated into proteins.`)">C. Chloroplast</button><button class="rb-mcq-choice" id="rb-mcq-2-D" onclick="rbCheckMCQ(2,'D','D',`Ribosomes are where mRNA is translated into proteins.`)">D. Ribosome</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-2"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q4.</span> The base pair partner of Adenine (A) in DNA is:</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-3-A" onclick="rbCheckMCQ(3,'A','D',`In DNA: A pairs with T, and G pairs with C.`)">A. Adenine (A)</button><button class="rb-mcq-choice" id="rb-mcq-3-B" onclick="rbCheckMCQ(3,'B','D',`In DNA: A pairs with T, and G pairs with C.`)">B. Guanine (G)</button><button class="rb-mcq-choice" id="rb-mcq-3-C" onclick="rbCheckMCQ(3,'C','D',`In DNA: A pairs with T, and G pairs with C.`)">C. Cytosine (C)</button><button class="rb-mcq-choice" id="rb-mcq-3-D" onclick="rbCheckMCQ(3,'D','D',`In DNA: A pairs with T, and G pairs with C.`)">D. Thymine (T)</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-3"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q5.</span> Light-colored moths are eaten more on dark-bark trees. Over time:</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-4-A" onclick="rbCheckMCQ(4,'A','B',`Dark moths survive better (natural selection), reproduce more, and become more common.`)">A. Light moths evolve to become dark</button><button class="rb-mcq-choice" id="rb-mcq-4-B" onclick="rbCheckMCQ(4,'B','B',`Dark moths survive better (natural selection), reproduce more, and become more common.`)">B. Dark moths become more common</button><button class="rb-mcq-choice" id="rb-mcq-4-C" onclick="rbCheckMCQ(4,'C','B',`Dark moths survive better (natural selection), reproduce more, and become more common.`)">C. All moths become the same color</button><button class="rb-mcq-choice" id="rb-mcq-4-D" onclick="rbCheckMCQ(4,'D','B',`Dark moths survive better (natural selection), reproduce more, and become more common.`)">D. Bird population decreases</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-4"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q6.</span> All foxes are removed from an ecosystem. What most likely happens FIRST?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-5-A" onclick="rbCheckMCQ(5,'A','B',`Without foxes (predators), the rabbit population grows unchecked.`)">A. Grass decreases</button><button class="rb-mcq-choice" id="rb-mcq-5-B" onclick="rbCheckMCQ(5,'B','B',`Without foxes (predators), the rabbit population grows unchecked.`)">B. Rabbit population increases</button><button class="rb-mcq-choice" id="rb-mcq-5-C" onclick="rbCheckMCQ(5,'C','B',`Without foxes (predators), the rabbit population grows unchecked.`)">C. A new predator appears</button><button class="rb-mcq-choice" id="rb-mcq-5-D" onclick="rbCheckMCQ(5,'D','B',`Without foxes (predators), the rabbit population grows unchecked.`)">D. Grass increases</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-5"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q7.</span> If a producer has 10,000 kcal, how much energy reaches the secondary consumer?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-6-A" onclick="rbCheckMCQ(6,'A','C',`10% rule: 10,000 to producer, 1,000 to primary consumer, 100 to secondary consumer.`)">A. 10,000 kcal</button><button class="rb-mcq-choice" id="rb-mcq-6-B" onclick="rbCheckMCQ(6,'B','C',`10% rule: 10,000 to producer, 1,000 to primary consumer, 100 to secondary consumer.`)">B. 1,000 kcal</button><button class="rb-mcq-choice" id="rb-mcq-6-C" onclick="rbCheckMCQ(6,'C','C',`10% rule: 10,000 to producer, 1,000 to primary consumer, 100 to secondary consumer.`)">C. 100 kcal</button><button class="rb-mcq-choice" id="rb-mcq-6-D" onclick="rbCheckMCQ(6,'D','C',`10% rule: 10,000 to producer, 1,000 to primary consumer, 100 to secondary consumer.`)">D. 10 kcal</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-6"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q8.</span> Which best describes negative feedback?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-7-A" onclick="rbCheckMCQ(7,'A','B',`Negative feedback reverses a change to maintain homeostasis (e.g. insulin lowers blood sugar).`)">A. It amplifies a change</button><button class="rb-mcq-choice" id="rb-mcq-7-B" onclick="rbCheckMCQ(7,'B','B',`Negative feedback reverses a change to maintain homeostasis (e.g. insulin lowers blood sugar).`)">B. It reverses a change to restore balance</button><button class="rb-mcq-choice" id="rb-mcq-7-C" onclick="rbCheckMCQ(7,'C','B',`Negative feedback reverses a change to maintain homeostasis (e.g. insulin lowers blood sugar).`)">C. It causes disease</button><button class="rb-mcq-choice" id="rb-mcq-7-D" onclick="rbCheckMCQ(7,'D','B',`Negative feedback reverses a change to maintain homeostasis (e.g. insulin lowers blood sugar).`)">D. It only increases hormone levels</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-7"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q9.</span> During transcription, DNA is used as a template to produce:</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-8-A" onclick="rbCheckMCQ(8,'A','C',`Transcription: DNA to mRNA (occurs in the nucleus).`)">A. A protein</button><button class="rb-mcq-choice" id="rb-mcq-8-B" onclick="rbCheckMCQ(8,'B','C',`Transcription: DNA to mRNA (occurs in the nucleus).`)">B. Another DNA strand</button><button class="rb-mcq-choice" id="rb-mcq-8-C" onclick="rbCheckMCQ(8,'C','C',`Transcription: DNA to mRNA (occurs in the nucleus).`)">C. mRNA</button><button class="rb-mcq-choice" id="rb-mcq-8-D" onclick="rbCheckMCQ(8,'D','C',`Transcription: DNA to mRNA (occurs in the nucleus).`)">D. ATP</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-8"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q10.</span> A Tt x tt cross produces what phenotype ratio?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-9-A" onclick="rbCheckMCQ(9,'A','C',`Tt x tt gives Tt, Tt, tt, tt — 2 dominant : 2 recessive = 1:1.`)">A. All dominant</button><button class="rb-mcq-choice" id="rb-mcq-9-B" onclick="rbCheckMCQ(9,'B','C',`Tt x tt gives Tt, Tt, tt, tt — 2 dominant : 2 recessive = 1:1.`)">B. All recessive</button><button class="rb-mcq-choice" id="rb-mcq-9-C" onclick="rbCheckMCQ(9,'C','C',`Tt x tt gives Tt, Tt, tt, tt — 2 dominant : 2 recessive = 1:1.`)">C. 1 dominant : 1 recessive</button><button class="rb-mcq-choice" id="rb-mcq-9-D" onclick="rbCheckMCQ(9,'D','C',`Tt x tt gives Tt, Tt, tt, tt — 2 dominant : 2 recessive = 1:1.`)">D. 3 dominant : 1 recessive</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-9"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q11.</span> Which is a BIOTIC factor in a pond ecosystem?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-10-A" onclick="rbCheckMCQ(10,'A','C',`Biotic = living. Algae is a living organism. Sunlight, temperature, and rocks are abiotic.`)">A. Sunlight</button><button class="rb-mcq-choice" id="rb-mcq-10-B" onclick="rbCheckMCQ(10,'B','C',`Biotic = living. Algae is a living organism. Sunlight, temperature, and rocks are abiotic.`)">B. Water temperature</button><button class="rb-mcq-choice" id="rb-mcq-10-C" onclick="rbCheckMCQ(10,'C','C',`Biotic = living. Algae is a living organism. Sunlight, temperature, and rocks are abiotic.`)">C. Algae</button><button class="rb-mcq-choice" id="rb-mcq-10-D" onclick="rbCheckMCQ(10,'D','C',`Biotic = living. Algae is a living organism. Sunlight, temperature, and rocks are abiotic.`)">D. Rock substrate</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-10"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q12.</span> Why do vaccines prevent disease?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-11-A" onclick="rbCheckMCQ(11,'A','C',`Vaccines expose the immune system to antigens so it learns to make antibodies without getting sick.`)">A. They kill all bacteria in the body</button><button class="rb-mcq-choice" id="rb-mcq-11-B" onclick="rbCheckMCQ(11,'B','C',`Vaccines expose the immune system to antigens so it learns to make antibodies without getting sick.`)">B. They cause the disease so you recover</button><button class="rb-mcq-choice" id="rb-mcq-11-C" onclick="rbCheckMCQ(11,'C','C',`Vaccines expose the immune system to antigens so it learns to make antibodies without getting sick.`)">C. They stimulate the immune system to produce antibodies</button><button class="rb-mcq-choice" id="rb-mcq-11-D" onclick="rbCheckMCQ(11,'D','C',`Vaccines expose the immune system to antigens so it learns to make antibodies without getting sick.`)">D. They block viruses from entering the body</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-11"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q13.</span> What happens to energy moving from producers to consumers?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-12-A" onclick="rbCheckMCQ(12,'A','C',`90% of energy is lost as heat at each trophic level — only 10% transfers up.`)">A. It increases</button><button class="rb-mcq-choice" id="rb-mcq-12-B" onclick="rbCheckMCQ(12,'B','C',`90% of energy is lost as heat at each trophic level — only 10% transfers up.`)">B. It stays the same</button><button class="rb-mcq-choice" id="rb-mcq-12-C" onclick="rbCheckMCQ(12,'C','C',`90% of energy is lost as heat at each trophic level — only 10% transfers up.`)">C. It decreases</button><button class="rb-mcq-choice" id="rb-mcq-12-D" onclick="rbCheckMCQ(12,'D','C',`90% of energy is lost as heat at each trophic level — only 10% transfers up.`)">D. It doubles</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-12"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q14.</span> Which provides evidence that two species share a common ancestor?</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-13-A" onclick="rbCheckMCQ(13,'A','B',`Homologous structures (similar bone arrangement in different species) indicate common ancestry.`)">A. They live in the same place</button><button class="rb-mcq-choice" id="rb-mcq-13-B" onclick="rbCheckMCQ(13,'B','B',`Homologous structures (similar bone arrangement in different species) indicate common ancestry.`)">B. They have homologous bone structures</button><button class="rb-mcq-choice" id="rb-mcq-13-C" onclick="rbCheckMCQ(13,'C','B',`Homologous structures (similar bone arrangement in different species) indicate common ancestry.`)">C. They eat the same food</button><button class="rb-mcq-choice" id="rb-mcq-13-D" onclick="rbCheckMCQ(13,'D','B',`Homologous structures (similar bone arrangement in different species) indicate common ancestry.`)">D. They are the same size</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-13"></div></div>
+<div class="rb-mcq-item"><div class="rb-mcq-q"><span class="rb-mcq-num">Q15.</span> A mutation in a skin cell of a person will:</div><div class="rb-mcq-choices"><button class="rb-mcq-choice" id="rb-mcq-14-A" onclick="rbCheckMCQ(14,'A','B',`Only mutations in reproductive cells (egg/sperm) can be inherited. Skin cell mutations stay in that person.`)">A. Be passed to all offspring</button><button class="rb-mcq-choice" id="rb-mcq-14-B" onclick="rbCheckMCQ(14,'B','B',`Only mutations in reproductive cells (egg/sperm) can be inherited. Skin cell mutations stay in that person.`)">B. Only affect that person, not offspring</button><button class="rb-mcq-choice" id="rb-mcq-14-C" onclick="rbCheckMCQ(14,'C','B',`Only mutations in reproductive cells (egg/sperm) can be inherited. Skin cell mutations stay in that person.`)">C. Always cause cancer</button><button class="rb-mcq-choice" id="rb-mcq-14-D" onclick="rbCheckMCQ(14,'D','B',`Only mutations in reproductive cells (egg/sperm) can be inherited. Skin cell mutations stay in that person.`)">D. Change DNA of all body cells</button></div><div class="rb-mcq-exp" id="rb-mcq-exp-14"></div></div>
+
+      <h2 class="rb-section-title" style="margin-top:24px">&#9997;&#65039; Short Answer Practice</h2>
+      <p style="font-size:13px;color:#9ca3af;margin-bottom:14px;">Try answering, then reveal.</p>
+      <div class="rb-sa-item"><div class="rb-sa-q"><span class="rb-sa-num">Q1.</span> Explain why organisms at the TOP of a food chain are most affected by pollutants that build up in tissues.</div><button class="rb-sa-btn" onclick="rbRevealSA(0)">Show Answer</button><div class="rb-sa-ans" id="rb-sa-0">Through bioaccumulation, each consumer eats many prey, concentrating the toxin. Top predators eat the most contaminated prey and accumulate the highest pollutant levels.</div></div>
+<div class="rb-sa-item"><div class="rb-sa-q"><span class="rb-sa-num">Q2.</span> A plant is placed in total darkness for 24 hours. What happens to its photosynthesis rate? Explain.</div><button class="rb-sa-btn" onclick="rbRevealSA(1)">Show Answer</button><div class="rb-sa-ans" id="rb-sa-1">Photosynthesis stops or greatly decreases because light is a required reactant — the reaction cannot proceed without it.</div></div>
+<div class="rb-sa-item"><div class="rb-sa-q"><span class="rb-sa-num">Q3.</span> Explain how insulin maintains blood sugar homeostasis.</div><button class="rb-sa-btn" onclick="rbRevealSA(2)">Show Answer</button><div class="rb-sa-ans" id="rb-sa-2">When blood sugar rises, the pancreas releases insulin. Insulin signals cells to absorb glucose, lowering blood sugar back to normal. This is negative feedback — the response reverses the original change.</div></div>
+<div class="rb-sa-item"><div class="rb-sa-q"><span class="rb-sa-num">Q4.</span> Explain how a mutation could be BENEFICIAL to an organism.</div><button class="rb-sa-btn" onclick="rbRevealSA(3)">Show Answer</button><div class="rb-sa-ans" id="rb-sa-3">If a mutation produces a protein that helps an organism survive better in its environment (such as resistance to a disease), that mutation is beneficial. Organisms with the mutation survive and reproduce more, passing it to offspring.</div></div>
+<div class="rb-sa-item"><div class="rb-sa-q"><span class="rb-sa-num">Q5.</span> Why does removing a species from an ecosystem often have unexpected effects?</div><button class="rb-sa-btn" onclick="rbRevealSA(4)">Show Answer</button><div class="rb-sa-ans" id="rb-sa-4">Species are interconnected in food webs. Removing one species causes its prey to overpopulate and its predators to lose a food source, disrupting the balance of the entire ecosystem (cascade effect).</div></div>
+
+    </div>
+  </div>
+</div><!-- /subject-regbio -->
 
 <!-- ══ FOOTER ══ -->
 <div style="text-align:center;padding:22px 20px;background:#0a0a0a;color:#6b7280;font-size:13px;letter-spacing:0.3px;">
