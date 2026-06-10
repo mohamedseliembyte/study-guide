@@ -3967,6 +3967,149 @@
   }
 
   /* ════════════════════════════════════════
+     REGENTS BIOLOGY (Living Environment)
+  ════════════════════════════════════════ */
+  // ── Units accordion ────────────────────
+  function rbToggleUnit(i) {
+    const body = document.getElementById('rb-ubody-' + i);
+    const chev = document.getElementById('rb-uchev-' + i);
+    if (!body) return;
+    const open = body.classList.toggle('open');
+    if (chev) chev.classList.toggle('open', open);
+  }
+
+  // ── Flashcards (30) ────────────────────
+  const RB_FC = [
+  [`What is homeostasis?`, `Maintaining a stable internal environment despite external changes.`],
+  [`What is negative feedback?`, `A response that reverses a change to restore balance (most common).`],
+  [`What is positive feedback?`, `A response that amplifies a change (e.g. childbirth).`],
+  [`What is diffusion?`, `Movement of molecules from high to low concentration (no ATP needed).`],
+  [`What is osmosis?`, `Diffusion of WATER across a semi-permeable membrane.`],
+  [`What is active transport?`, `Movement against the concentration gradient — requires ATP.`],
+  [`What is photosynthesis?`, `Plants use light to convert CO2 + H2O into glucose + O2.`],
+  [`What is cellular respiration?`, `Cells release ATP energy from glucose using O2.`],
+  [`What is DNA?`, `Double-stranded molecule carrying genetic info (A-T, G-C base pairs).`],
+  [`What is a gene?`, `Segment of DNA coding for a specific protein.`],
+  [`What is a mutation?`, `Change in DNA sequence — can be beneficial, harmful, or neutral.`],
+  [`What is protein synthesis?`, `Transcription (DNA → mRNA) + Translation (mRNA → protein at ribosome).`],
+  [`What does "dominant" mean?`, `An allele expressed over a recessive allele.`],
+  [`What does "recessive" mean?`, `An allele expressed only when two copies are present.`],
+  [`What is natural selection?`, `Organisms with favorable traits survive and reproduce more.`],
+  [`What is an adaptation?`, `A trait that increases survival fitness in an environment.`],
+  [`What is a producer?`, `Makes its own food (plants, algae) — most energy in the food web.`],
+  [`What is a consumer?`, `Gets energy by eating other organisms.`],
+  [`What is a decomposer?`, `Breaks down dead matter, recycling nutrients.`],
+  [`What is biodiversity?`, `Variety of life in an area. Higher biodiversity = more stable ecosystem.`],
+  [`What is an antibody?`, `Protein made by the immune system to fight a specific pathogen.`],
+  [`What is a vaccine?`, `Stimulates immunity without causing disease.`],
+  [`What is an enzyme?`, `Biological catalyst that speeds up reactions without being consumed.`],
+  [`What is ATP?`, `Adenosine triphosphate — the cell's energy currency.`],
+  [`What is the function of the mitochondria?`, `Powerhouse of the cell — produces ATP through cellular respiration.`],
+  [`What is the function of the ribosome?`, `Site of protein synthesis (translation of mRNA into protein).`],
+  [`In DNA, what base pairs with adenine (A)?`, `Thymine (T). Guanine (G) pairs with cytosine (C).`],
+  [`Why does available energy decrease at each trophic level?`, `Only about 10% of energy passes up a level; the rest is lost as heat.`],
+  [`What is the role of the cell membrane?`, `A selectively permeable barrier controlling what enters and exits the cell.`],
+  [`What is a Punnett square used for?`, `Predicting the probability of offspring genotypes and phenotypes.`]
+  ];
+  let rbFCOrder = RB_FC.map((_, i) => i);
+  let rbFCIdx = 0;
+  let rbFCFlipped = false;
+
+  function rbSetCard(idx) {
+    rbFCIdx = idx;
+    rbFCFlipped = false;
+    const inner = document.getElementById('rb-fc-inner');
+    if (inner) inner.classList.remove('flipped');
+    const n = rbFCOrder[idx];
+    const ft = document.getElementById('rb-fc-front');
+    const bt = document.getElementById('rb-fc-back');
+    const ctr = document.getElementById('rb-fc-counter');
+    if (ft) ft.textContent = RB_FC[n][0];
+    if (bt) bt.textContent = RB_FC[n][1];
+    if (ctr) ctr.textContent = 'Card ' + (idx + 1) + ' of ' + RB_FC.length;
+    document.querySelectorAll('.rb-fc-dot').forEach((d, di) => {
+      d.classList.toggle('active', di === idx);
+    });
+  }
+  function rbFlipCard() {
+    const inner = document.getElementById('rb-fc-inner');
+    if (!inner) return;
+    rbFCFlipped = !rbFCFlipped;
+    inner.classList.toggle('flipped', rbFCFlipped);
+  }
+  function rbNextCard() {
+    rbSetCard((rbFCIdx + 1) % RB_FC.length);
+  }
+  function rbPrevCard() {
+    rbSetCard((rbFCIdx - 1 + RB_FC.length) % RB_FC.length);
+  }
+  function rbGotoCard(i) {
+    rbSetCard(i);
+  }
+  function rbShuffleCards() {
+    for (let i = rbFCOrder.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rbFCOrder[i], rbFCOrder[j]] = [rbFCOrder[j], rbFCOrder[i]];
+    }
+    rbSetCard(0);
+  }
+
+  // ── MCQ Quiz (out of 15) ───────────────
+  let rbScore = 0;
+  const rbAnswered = new Set();
+
+  function rbCheckMCQ(qIdx, chosen, correct, explanation) {
+    if (rbAnswered.has(qIdx)) return;
+    rbAnswered.add(qIdx);
+
+    ['A','B','C','D'].forEach(ch => {
+      const btn = document.getElementById('rb-mcq-' + qIdx + '-' + ch);
+      if (!btn) return;
+      btn.disabled = true;
+      if (ch === correct) btn.classList.add(chosen === correct ? 'correct' : 'reveal');
+      else if (ch === chosen) btn.classList.add('wrong');
+    });
+
+    const exp = document.getElementById('rb-mcq-exp-' + qIdx);
+    if (exp) {
+      const icon = chosen === correct ? '✅' : '❌';
+      const label = chosen === correct ? 'Correct!' : 'Incorrect.';
+      exp.innerHTML = icon + ' <strong>' + label + '</strong> ' + explanation;
+      exp.classList.add('show');
+    }
+
+    if (chosen === correct) {
+      rbScore++;
+      const el = document.getElementById('rb-score');
+      if (el) el.textContent = rbScore;
+    }
+  }
+
+  function rbResetQuiz() {
+    rbScore = 0;
+    rbAnswered.clear();
+    const el = document.getElementById('rb-score');
+    if (el) el.textContent = '0';
+    document.querySelectorAll('.rb-mcq-choice').forEach(b => {
+      b.disabled = false;
+      b.classList.remove('correct','wrong','reveal');
+    });
+    document.querySelectorAll('.rb-mcq-exp').forEach(e => {
+      e.classList.remove('show');
+      e.innerHTML = '';
+    });
+  }
+
+  // ── Short Answer reveals ───────────────
+  function rbRevealSA(i) {
+    const el = document.getElementById('rb-sa-' + i);
+    if (!el) return;
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    if (btn) btn.textContent = el.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+  }
+
+  /* ════════════════════════════════════════
      SOCIAL STUDIES — GLOBAL HISTORY
   ════════════════════════════════════════ */
   const ssAnswered = new Set();
