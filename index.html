@@ -72,6 +72,7 @@
     .subject-btn.lotf-active  { background: #BA7517; color: #fff; border-color: #BA7517; }
     .subject-btn.alg1-active  { background: #1d4ed8; color: #fff; border-color: #1d4ed8; font-weight:700; }
     .subject-btn.regbio-active{ background: #16a34a; color: #fff; border-color: #16a34a; font-weight:700; }
+    .subject-btn.socst-active { background: #7c3aed; color: #fff; border-color: #7c3aed; font-weight:700; }
 
     /* ══════════════════════════════════════
        SUBJECT PANELS — fade in/out
@@ -1227,6 +1228,120 @@
     .rb-sa-ans { display: none; margin-top: 10px; padding: 10px 12px; background: #0a0d0b; border-left: 3px solid #16a34a; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; color: #86efac; }
     .rb-sa-ans.show { display: block; }
 
+    /* ══════════════════════════════════════
+       SOCIAL STUDIES — GLOBAL HISTORY (purple)
+    ══════════════════════════════════════ */
+    .socst-header { background: linear-gradient(135deg, #15101f 0%, #1a1228 100%); border-bottom: 2px solid #7c3aed; color: white; padding: 40px 20px; text-align: center; }
+    .socst-header h1 { font-size: 30px; margin-bottom: 8px; font-weight: 700; color: #c4b5fd; }
+    .socst-header p  { font-size: 14px; opacity: 0.92; }
+    .socst-header .socst-sub { font-size: 13px; opacity: 0.75; margin-top: 6px; }
+
+    .socst-tab-btn { padding: 11px 22px; border: 1px solid #222222; background: #111111; color: #e5e7eb; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.25s ease; }
+    .socst-tab-btn:hover  { background: #111111; border-color: #7c3aed; color: #c4b5fd; }
+    .socst-tab-btn.active { background: #7c3aed; color: #fff; border-color: #7c3aed; font-weight: 700; }
+
+    .section-title.purple { border-color: #7c3aed; }
+
+    /* Table of contents */
+    .ss-toc { background: #141026; border: 1px solid #2a2140; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px; }
+    .ss-toc-title { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #a78bfa; font-weight: 700; margin-bottom: 10px; }
+    .ss-toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ss-toc-links a { font-size: 13px; color: #c4b5fd; text-decoration: none; background: #1a1430; border: 1px solid #2a2140; border-radius: 20px; padding: 5px 13px; transition: all .2s; }
+    .ss-toc-links a:hover { background: #7c3aed; color: #fff; border-color: #7c3aed; }
+
+    /* Big idea / theme callout */
+    .ss-callout { background: linear-gradient(135deg, rgba(124,58,237,.12) 0%, rgba(167,139,250,.06) 100%); border: 1px solid #7c3aed; border-left: 4px solid #7c3aed; border-radius: 10px; padding: 16px 18px; margin-bottom: 18px; font-size: 14px; line-height: 1.65; color: #ddd6fe; }
+    .ss-callout strong { color: #c4b5fd; }
+    .ss-callout .ss-callout-label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .8px; color: #a78bfa; font-weight: 700; margin-bottom: 6px; }
+
+    /* Key distinction / watch-out callout */
+    .ss-keynote { background: #1a1228; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 16px; margin-bottom: 18px; font-size: 13px; line-height: 1.6; color: #fde68a; }
+    .ss-keynote strong { color: #fbbf24; }
+
+    /* Definition card */
+    .ss-def { background: #141026; border: 1px solid #2a2140; border-radius: 8px; padding: 16px 18px; margin-bottom: 18px; }
+    .ss-def-term { font-size: 15px; font-weight: 700; color: #c4b5fd; margin-bottom: 6px; }
+    .ss-def-body { font-size: 13px; color: #d1d5db; line-height: 1.6; }
+
+    /* Quote block */
+    .ss-quote { background: #111111; border-left: 4px solid #7c3aed; border-radius: 6px; padding: 14px 18px; margin: 14px 0; font-style: italic; font-size: 14px; color: #e5e7eb; line-height: 1.6; }
+    .ss-quote cite { display: block; margin-top: 8px; font-style: normal; font-size: 12px; color: #a78bfa; font-weight: 600; }
+
+    /* Data tables */
+    .ss-table { width: 100%; border-collapse: collapse; margin: 6px 0 18px; font-size: 13px; background: #111111; border-radius: 8px; overflow: hidden; }
+    .ss-table th { background: #241a3a; color: #c4b5fd; text-align: left; padding: 10px 12px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; border-bottom: 2px solid #7c3aed; }
+    .ss-table td { padding: 10px 12px; border-bottom: 1px solid #1f1933; color: #d1d5db; vertical-align: top; line-height: 1.55; }
+    .ss-table tr:last-child td { border-bottom: none; }
+    .ss-table tr:nth-child(even) td { background: #14101f; }
+    .ss-table-wrap { overflow-x: auto; }
+
+    /* Cards grid (empires, thinkers, monarchs) */
+    .ss-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 18px; }
+    .ss-card { background: #141026; border: 1px solid #2a2140; border-left: 4px solid #7c3aed; border-radius: 8px; padding: 14px 16px; transition: transform .2s ease, box-shadow .2s ease; }
+    .ss-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(124,58,237,.18); }
+    .ss-card-title { font-size: 15px; font-weight: 700; color: #c4b5fd; margin-bottom: 3px; }
+    .ss-card-meta { font-size: 12px; color: #9ca3af; font-style: italic; margin-bottom: 8px; }
+    .ss-card-body { font-size: 13px; color: #d1d5db; line-height: 1.6; }
+
+    /* Enduring-issue tags */
+    .ss-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 6px 0 16px; }
+    .ss-tag { background: #1a1430; border: 1px solid #7c3aed66; color: #c4b5fd; border-radius: 20px; padding: 4px 12px; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+
+    /* Key terms flip grid */
+    .ss-term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .ss-term-card { background: #111111; border: 1px solid #2a2140; border-radius: 8px; padding: 13px 15px; }
+    .ss-term-card .ss-term { font-size: 14px; font-weight: 700; color: #c4b5fd; margin-bottom: 5px; }
+    .ss-term-card .ss-term-def { font-size: 12px; color: #9ca3af; line-height: 1.55; }
+
+    /* MCQ (review questions) */
+    .ss-mcq-item { background: #141026; border: 1px solid #2a2140; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+    .ss-mcq-q { font-size: 14px; font-weight: 600; color: #e5e7eb; margin-bottom: 12px; line-height: 1.5; }
+    .ss-mcq-num { color: #a78bfa; }
+    .ss-mcq-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    @media(max-width:420px){ .ss-mcq-choices { grid-template-columns: 1fr; } }
+    .ss-mcq-choice { background: #111111; border: 2px solid #2a2140; border-radius: 8px; padding: 10px 12px; cursor: pointer; font-size: 13px; color: #ccc; transition: all .2s; text-align: left; }
+    .ss-mcq-choice:hover:not([disabled]) { border-color: #7c3aed; color: #f0f0f0; }
+    .ss-mcq-choice.correct { background: #0f1a0a; border-color: #22c55e; color: #4ade80; }
+    .ss-mcq-choice.wrong   { background: #1a0a0a; border-color: #ef4444; color: #f87171; }
+    .ss-mcq-choice.reveal  { background: #0f1a0a; border-color: #22c55e; color: #4ade80; opacity: .7; }
+    .ss-mcq-exp { margin-top: 10px; padding: 10px 12px; background: #0c0a14; border-left: 3px solid #7c3aed; border-radius: 6px; font-size: 13px; color: #aaa; display: none; }
+    .ss-mcq-exp.show { display: block; }
+
+    .ss-score-bar { display: flex; align-items: center; justify-content: space-between; background: #141026; border: 1px solid #2a2140; border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; }
+    .ss-score-num { font-size: 22px; font-weight: 800; color: #c4b5fd; }
+    .ss-reset-btn { padding: 7px 16px; background: transparent; border: 1px solid #7c3aed66; border-radius: 20px; color: #c4b5fd; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .ss-reset-btn:hover { background: #7c3aed22; }
+
+    /* Written / extended response reveal */
+    .ss-written-item { background: #111111; border: 1px solid #2a2140; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+    .ss-written-q { font-size: 14px; color: #e5e7eb; margin-bottom: 10px; line-height: 1.55; }
+    .ss-written-q span { color: #a78bfa; font-weight: 700; }
+    .ss-written-btn { padding: 7px 16px; background: transparent; border: 1px solid #7c3aed66; border-radius: 20px; color: #c4b5fd; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .ss-written-btn:hover { background: #7c3aed22; }
+    .ss-written-answer { display: none; margin-top: 10px; padding: 12px 14px; background: #0c0a14; border-left: 3px solid #7c3aed; border-radius: 6px; font-size: 13px; color: #ddd6fe; line-height: 1.65; }
+    .ss-written-answer.show { display: block; }
+
+    /* Flashcards (reuse generic flip look in purple) */
+    .ss-fc-wrapper { max-width: 460px; margin: 0 auto; }
+    .ss-fc-counter { text-align: center; font-size: 13px; color: #a78bfa; margin-bottom: 12px; font-weight: 600; }
+    .ss-fc-scene { perspective: 1000px; cursor: pointer; margin-bottom: 16px; }
+    .ss-fc-inner { position: relative; width: 100%; min-height: 180px; transition: transform .5s; transform-style: preserve-3d; }
+    .ss-fc-inner.flipped { transform: rotateY(180deg); }
+    .ss-fc-front, .ss-fc-back { position: absolute; width: 100%; min-height: 180px; backface-visibility: hidden; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; }
+    .ss-fc-front { background: #141026; border: 2px solid #7c3aed; }
+    .ss-fc-back  { background: #1f1633; border: 2px solid #a78bfa; transform: rotateY(180deg); }
+    .ss-fc-front-text { font-size: 17px; font-weight: 700; color: #c4b5fd; }
+    .ss-fc-hint { font-size: 11px; color: #6b7280; margin-top: 10px; }
+    .ss-fc-back-text { font-size: 14px; color: #ede9fe; line-height: 1.6; }
+    .ss-fc-nav { display: flex; gap: 10px; justify-content: center; margin-bottom: 14px; }
+    .ss-fc-nav-btn { padding: 9px 18px; background: #141026; border: 1px solid #2a2140; border-radius: 8px; color: #c4b5fd; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .ss-fc-nav-btn:hover { background: #7c3aed; color: #fff; border-color: #7c3aed; }
+
+    /* Estate / class pyramid */
+    .ss-pyramid { display: flex; flex-direction: column; gap: 6px; margin: 6px 0 18px; }
+    .ss-pyramid-row { background: #141026; border: 1px solid #2a2140; border-left: 4px solid #7c3aed; border-radius: 8px; padding: 11px 16px; font-size: 13px; color: #d1d5db; }
+    .ss-pyramid-row strong { color: #c4b5fd; }
+
   </style>
 </head>
 <body>
@@ -1246,6 +1361,7 @@
       <button class="subject-btn"             id="btn-lotf"  onclick="switchSubject('lotf')">📖 Lord of the Flies</button>
       <button class="subject-btn"             id="btn-regbio" onclick="switchSubject('regbio')">🔬 Regents Bio</button>
       <button class="subject-btn"             id="btn-alg1"  onclick="switchSubject('alg1')">📊 Regents Algebra</button>
+      <button class="subject-btn"             id="btn-socst" onclick="switchSubject('socst')">🌍 Global History</button>
     </div>
   </div>
   <button class="subject-show-tab" id="subject-show-tab" onclick="showSubjectBar()">▼ show subjects</button>
@@ -3204,13 +3320,14 @@
   const SUBJECT_TABS = {
     bio:   ['vocab','processes','math','review'],
     islam: ['lessons','notes','qreview'],
-    lotf:  ['chapters','timeline','settings','characters','themes','review']
+    lotf:  ['chapters','timeline','settings','characters','themes','review'],
+    socst: ['u1','u2']
   };
   let currentSubject = 'bio';
 
   function switchSubject(sub) {
     document.querySelectorAll('.subject-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('bio-active','islam-active','lotf-active','alg1-active','regbio-active'));
+    document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('bio-active','islam-active','lotf-active','alg1-active','regbio-active','socst-active'));
     document.getElementById('subject-' + sub).classList.add('active');
     document.getElementById('btn-' + sub).classList.add(sub + '-active');
     currentSubject = sub;
@@ -3849,6 +3966,105 @@
     if (btn) btn.textContent = el.classList.contains('show') ? 'Hide Answer' : 'Show Strong Answer';
   }
 
+  /* ════════════════════════════════════════
+     SOCIAL STUDIES — GLOBAL HISTORY
+  ════════════════════════════════════════ */
+  const ssAnswered = new Set();
+  const ssScores = {};
+
+  function ssCheckMCQ(qid, group, chosen, correct, explanation) {
+    if (ssAnswered.has(qid)) return;
+    ssAnswered.add(qid);
+    ['A','B','C','D'].forEach(ch => {
+      const btn = document.getElementById('ss-mcq-' + qid + '-' + ch);
+      if (!btn) return;
+      btn.disabled = true;
+      if (ch === correct) btn.classList.add(chosen === correct ? 'correct' : 'reveal');
+      else if (ch === chosen) btn.classList.add('wrong');
+    });
+    const exp = document.getElementById('ss-mcq-exp-' + qid);
+    if (exp) {
+      const icon = chosen === correct ? '✅' : '❌';
+      exp.innerHTML = icon + ' <strong>' + (chosen === correct ? 'Correct!' : 'Incorrect.') + '</strong> ' + explanation;
+      exp.classList.add('show');
+    }
+    if (chosen === correct) {
+      ssScores[group] = (ssScores[group] || 0) + 1;
+      const el = document.getElementById('ss-score-' + group);
+      if (el) el.textContent = ssScores[group];
+    }
+  }
+
+  function ssResetQuiz(group) {
+    ssScores[group] = 0;
+    const el = document.getElementById('ss-score-' + group);
+    if (el) el.textContent = '0';
+    document.querySelectorAll('.ss-mcq-item[data-ssgroup="' + group + '"]').forEach(item => {
+      item.querySelectorAll('.ss-mcq-choice').forEach(b => {
+        b.disabled = false;
+        b.classList.remove('correct','wrong','reveal');
+      });
+      const e = item.querySelector('.ss-mcq-exp');
+      if (e) { e.classList.remove('show'); e.innerHTML = ''; }
+      ssAnswered.delete(item.getAttribute('data-ssqid'));
+    });
+  }
+
+  function ssRevealWritten(id) {
+    const el = document.getElementById('ss-written-' + id);
+    if (!el) return;
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    if (btn) btn.textContent = el.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+  }
+
+  // Unit 2 vocabulary flashcards
+  const SS_FC = [
+    [`Heliocentric Theory`, `The Sun is at the center of the solar system, and Earth and other planets orbit it. (Copernicus, Galileo)`],
+    [`Geocentric Theory`, `The old belief that Earth is the center of the universe. Supported by the Church; disproved by Copernicus & Galileo.`],
+    [`Scientific Method`, `Testing ideas using observation, hypothesis, experimentation, and conclusion — the foundation of modern science.`],
+    [`Enlightenment`, `18th-century movement applying reason to society, government, and rights. Inspired by the Scientific Revolution.`],
+    [`Natural Rights`, `Rights people are born with that cannot be taken away — life, liberty, property (Locke).`],
+    [`Peninsulares`, `Spaniards born in Spain who held the highest rank in Latin America's colonial class system.`],
+    [`Creoles`, `People of Spanish descent born in the Americas — wealthy but below Peninsulares; often led independence movements.`],
+    [`Coup d'État`, `A sudden, often military seizure of power. Napoleon used one in 1799 to take control of France.`],
+    [`Napoleonic Code`, `Napoleon's legal reforms that standardized French law; spread across Europe through conquest.`],
+    [`Reign of Terror`, `Radical phase of the French Revolution (1793–94) led by Robespierre; thousands executed by guillotine.`],
+    [`Nationalism`, `Pride in one's nation and desire for self-governance. Fueled the French and Latin American revolutions.`],
+    [`Self-Determination`, `The idea that people have the right to govern themselves rather than be ruled by a foreign power. (Bolívar)`]
+  ];
+  let ssFCOrder = SS_FC.map((_, i) => i);
+  let ssFCIdx = 0;
+  let ssFCFlipped = false;
+
+  function ssSetCard(idx) {
+    ssFCIdx = idx; ssFCFlipped = false;
+    const inner = document.getElementById('ss-fc-inner');
+    if (inner) inner.classList.remove('flipped');
+    const n = ssFCOrder[idx];
+    const ft = document.getElementById('ss-fc-front');
+    const bt = document.getElementById('ss-fc-back');
+    const ctr = document.getElementById('ss-fc-counter');
+    if (ft) ft.textContent = SS_FC[n][0];
+    if (bt) bt.textContent = SS_FC[n][1];
+    if (ctr) ctr.textContent = 'Card ' + (idx + 1) + ' of ' + SS_FC.length;
+  }
+  function ssFlipCard() {
+    const inner = document.getElementById('ss-fc-inner');
+    if (!inner) return;
+    ssFCFlipped = !ssFCFlipped;
+    inner.classList.toggle('flipped', ssFCFlipped);
+  }
+  function ssNextCard() { ssSetCard((ssFCIdx + 1) % SS_FC.length); }
+  function ssPrevCard() { ssSetCard((ssFCIdx - 1 + SS_FC.length) % SS_FC.length); }
+  function ssShuffleCards() {
+    for (let i = ssFCOrder.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ssFCOrder[i], ssFCOrder[j]] = [ssFCOrder[j], ssFCOrder[i]];
+    }
+    ssSetCard(0);
+  }
+
 </script>
 
 <!-- REGENTS BIOLOGY PANEL -->
@@ -3980,6 +4196,557 @@
     </div>
   </div>
 </div><!-- /subject-regbio -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     ⑥  SOCIAL STUDIES — GLOBAL HISTORY & GEOGRAPHY
+═══════════════════════════════════════════════════════════ -->
+<div id="subject-socst" class="subject-panel">
+  <div class="socst-header">
+    <h1>🌍 Global History &amp; Geography</h1>
+    <p>Interactive study guide · 1750 → Age of Revolutions · Scientific Thought</p>
+    <div class="socst-sub">Use the tabs to switch between Unit 1 and Unit 2 · Tap review questions to check yourself</div>
+  </div>
+  <div class="container">
+    <div class="tab-nav">
+      <button class="socst-tab-btn active" onclick="switchTab('socst','u1',this)">📜 Unit 1 — The World in 1750</button>
+      <button class="socst-tab-btn"        onclick="switchTab('socst','u2',this)">⚗️ Unit 2 — Revolutions &amp; Science</button>
+    </div>
+
+    <!-- ══════════════ UNIT 1 ══════════════ -->
+    <div id="socst-u1" class="tab-content active">
+      <div class="socst-header" style="border-radius:10px;border-bottom:none;border:1px solid #2a2140;margin-bottom:22px;padding:26px 20px;">
+        <p style="font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#a78bfa;font-weight:700;margin-bottom:6px;">Global History &amp; Geography · Unit 1</p>
+        <h1 style="font-size:24px;">The World in 1750 to the Age of Revolutions</h1>
+        <div class="socst-sub">Absolutism · The Enlightenment · American &amp; French Revolutions · Africa in 1750</div>
+      </div>
+
+      <div class="ss-toc">
+        <div class="ss-toc-title">📑 Table of Contents</div>
+        <div class="ss-toc-links">
+          <a href="#u1-s1">1. The World in 1750</a>
+          <a href="#u1-s2">2. Absolutism in Europe</a>
+          <a href="#u1-s3">3. Absolutism in Asia</a>
+          <a href="#u1-s4">4. The Enlightenment</a>
+          <a href="#u1-s5">5. American &amp; French Revolutions</a>
+          <a href="#u1-s6">6. Africa in 1750</a>
+          <a href="#u1-s7">7. Key Terms</a>
+          <a href="#u1-s8">8. Comparison Chart</a>
+          <a href="#u1-s9">9. Practice Questions</a>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="section" id="u1-s1">
+        <div class="section-title purple">1 · The World in 1750</div>
+        <div class="ss-callout">
+          <span class="ss-callout-label">Big Idea</span>
+          In 1750 the world was dominated by powerful empires competing for trade, territory, and resources — each with its own approach to power and foreign contact.
+        </div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Empire</th><th>Key Facts</th></tr>
+          <tr><td><strong>Ottoman Empire</strong></td><td>Crossroads of Europe/Asia; diverse population → tensions; major trade hub; Istanbul markets famous</td></tr>
+          <tr><td><strong>Mughal Empire (India)</strong></td><td>Cultural &amp; economic hub; Indian Ocean trade; religious tensions + weak leadership → decline; growing European influence</td></tr>
+          <tr><td><strong>Qing Dynasty (China)</strong></td><td>Strongest empire in 1750; centralized bureaucracy; Canton System restricts European trade; Qianlong's 1793 edict: "Our Celestial Empire possesses all things in abundance"</td></tr>
+          <tr><td><strong>Tokugawa Japan</strong></td><td>Strict sakoku isolation policy; Closed Country Edict 1635 still in effect; rigid class hierarchy; violators executed</td></tr>
+          <tr><td><strong>European Powers</strong></td><td>Britain, France, Spain expanding overseas; Atlantic coastlines enabled global trade domination; competition among each other</td></tr>
+        </table>
+        </div>
+        <div class="ss-tags">
+          <span class="ss-tag">Power</span><span class="ss-tag">Conflict</span><span class="ss-tag">Interconnectedness</span><span class="ss-tag">Inequality</span>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section" id="u1-s2">
+        <div class="section-title purple">2 · Absolutism in Europe</div>
+        <div class="ss-def">
+          <div class="ss-def-term">Absolutism</div>
+          <div class="ss-def-body">A political system where a monarch holds total power, justified by <strong>Divine Right</strong> (the ruler's authority comes directly from God).</div>
+        </div>
+        <div class="ss-quote">"Kings reign by divine right. Their authority comes from God and is absolute."<cite>— Bishop Bossuet</cite></div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Monarch</th><th>Country / Reign</th><th>Key Facts</th></tr>
+          <tr><td><strong>Louis XIV</strong><br>"The Sun King"</td><td>France · 1643–1715</td><td>Built Palace of Versailles; moved nobility there to control them; famous quote "I am the state"; sun as royal symbol; considered himself God's representative</td></tr>
+          <tr><td><strong>Peter the Great</strong></td><td>Russia · 1682–1725</td><td>Modernized Russia (Westernization); built navy; expanded territory; founded St. Petersburg as "window to the West"; reorganized state administration</td></tr>
+          <tr><td><strong>Philip II</strong></td><td>Spain · 1556–1598</td><td>Defender of Catholicism; built Escorial Palace; Spanish Armada vs. England (1588); centralized royal power</td></tr>
+        </table>
+        </div>
+        <div class="ss-keynote"><strong>Symbols of Absolutism:</strong> Palaces · Monarch portraits · Religion to justify authority · Large armies · Control of resources</div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section" id="u1-s3">
+        <div class="section-title purple">3 · Absolutism in Asia</div>
+        <div class="ss-keynote">European monarchs expanded <strong>outward</strong> through empire-building and justified rule via divine right. Asian rulers often turned <strong>inward</strong>, consolidating control through isolation, bureaucracy, or religious policy.</div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Empire</th><th>Key Facts</th></tr>
+          <tr><td><strong>Tokugawa Japan</strong></td><td>Centralized feudalism; daimyo required in Edo; sakoku isolation; hierarchy: Emperor (figurehead) → Shogun → Daimyo/Samurai → Peasants; symbol: Edo Castle</td></tr>
+          <tr><td><strong>Mughal India</strong></td><td>Akbar: tolerance, centralized rule; Taj Mahal; Aurangzeb: stricter Islamic law, reimposed jizya tax; religious shift → decline</td></tr>
+          <tr><td><strong>Qing China</strong></td><td>Expansion by conquest; Confucian bureaucracy; Canton System; Qianlong rejected British trade demands (1793); symbol: Forbidden City</td></tr>
+        </table>
+        </div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Feature</th><th>Europe</th><th>Asia</th></tr>
+          <tr><td><strong>Justification</strong></td><td>Divine Right (God)</td><td>Tradition, Confucianism, religion</td></tr>
+          <tr><td><strong>Foreign Policy</strong></td><td>Expansion &amp; colonialism</td><td>Isolation or restricted contact</td></tr>
+          <tr><td><strong>Architecture</strong></td><td>Versailles, Escorial</td><td>Forbidden City, Taj Mahal, Edo Castle</td></tr>
+          <tr><td><strong>Similarity</strong></td><td colspan="2">Centralized power · monumental architecture · strict control of subjects</td></tr>
+        </table>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section" id="u1-s4">
+        <div class="section-title purple">4 · The Enlightenment</div>
+        <div class="ss-def">
+          <div class="ss-def-term">The Enlightenment (Age of Reason, ~1650–1800)</div>
+          <div class="ss-def-body">Thinkers used logic and natural law — not tradition or religion — to question government. It challenged absolutism and promoted liberty, democracy, and progress.</div>
+        </div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Thinker</th><th>Country · Dates</th><th>Key Ideas</th></tr>
+          <tr><td><strong>John Locke</strong></td><td>England · 1632–1704</td><td>Natural rights: life, liberty, property; government exists to protect these; if government fails, people can overthrow it; influenced Declaration of Independence</td></tr>
+          <tr><td><strong>Montesquieu</strong></td><td>France · 1689–1755</td><td>Separation of powers into three branches; checks &amp; balances prevent tyranny; inspired U.S. Constitution; "power should be a check to power"</td></tr>
+          <tr><td><strong>Voltaire</strong></td><td>France · 1694–1778</td><td>Freedom of speech &amp; religion; criticized intolerance &amp; injustice; "I disapprove of what you say, but I will defend to the death your right to say it."</td></tr>
+          <tr><td><strong>Jean-Jacques Rousseau</strong></td><td>France/Switzerland · 1712–1778</td><td>Wrote <em>The Social Contract</em> (1762); popular sovereignty: authority from consent of the people; government must reflect the "general will"; "Man is born free, and everywhere he is in chains."</td></tr>
+        </table>
+        </div>
+        <div class="ss-tags">
+          <span class="ss-tag">Human Rights</span><span class="ss-tag">Power</span><span class="ss-tag">Inequality</span><span class="ss-tag">Reform</span>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section" id="u1-s5">
+        <div class="section-title purple">5 · American &amp; French Revolutions</div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Revolution</th><th>Key Facts</th></tr>
+          <tr><td><strong>American Revolution (1776)</strong></td><td>Inspired by Locke's natural rights; colonists resisted "taxation without representation"; Declaration of Independence: governments must protect life, liberty, pursuit of happiness; created a republic with separation of powers</td></tr>
+          <tr><td><strong>French Revolution (1789)</strong></td><td>Inequality under the Estates System; economic crisis (heavy taxation, food shortages); inspired by Enlightenment &amp; American Revolution; Declaration of the Rights of Man: liberty, equality, property, resistance to oppression</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 8px;">The Estates System</h3>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Estate</th><th>Who</th><th>Taxes</th><th>% of Population</th></tr>
+          <tr><td><strong>First Estate</strong></td><td>Catholic Clergy</td><td>Almost none</td><td>~0.5%</td></tr>
+          <tr><td><strong>Second Estate</strong></td><td>Nobles (owned 20% of land)</td><td>Almost none</td><td>~1.5%</td></tr>
+          <tr><td><strong>Third Estate</strong></td><td>Everyone else: merchants, workers, peasants</td><td>~50% of income</td><td>~98%</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 8px;">American vs. French Revolution</h3>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th></th><th>American Revolution</th><th>French Revolution</th></tr>
+          <tr><td><strong>Main Cause</strong></td><td>Taxation without representation</td><td>Inequality, poverty, weak monarchy</td></tr>
+          <tr><td><strong>Key Document</strong></td><td>Declaration of Independence</td><td>Declaration of the Rights of Man</td></tr>
+          <tr><td><strong>Enlightenment Link</strong></td><td>Locke, Montesquieu</td><td>Rousseau, Voltaire</td></tr>
+          <tr><td><strong>Outcome</strong></td><td>Stable republic (USA)</td><td>Radical change → Reign of Terror → Napoleon</td></tr>
+          <tr><td><strong>Similarity</strong></td><td colspan="2">Both challenged absolute rule · Enlightenment-inspired · produced rights documents</td></tr>
+        </table>
+        </div>
+        <div class="ss-quote">"We hold these truths to be self-evident, that all men are created equal…"<cite>— Declaration of Independence</cite></div>
+        <div class="ss-quote">"Men are born and remain free and equal in rights…"<cite>— Declaration of the Rights of Man</cite></div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section" id="u1-s6">
+        <div class="section-title purple">6 · Africa in 1750</div>
+        <div class="ss-callout">
+          <span class="ss-callout-label">Theme</span>
+          Africa was <strong>NOT</strong> primitive or isolated — it had powerful empires, complex trade networks, and sophisticated societies <strong>before</strong> European colonization.
+        </div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Empire</th><th>Region</th><th>Key Facts</th></tr>
+          <tr><td><strong>Ashanti</strong></td><td>West Africa</td><td>Grew wealthy from gold, ivory, &amp; slave trade; controlled major trade routes; interacted with Europeans through coastal trade</td></tr>
+          <tr><td><strong>Dahomey</strong></td><td>West Africa</td><td>Powerful kingdom; major participant in the Atlantic slave trade era</td></tr>
+          <tr><td><strong>Benin</strong></td><td>West Africa</td><td>Advanced kingdom known for bronze artwork and trade networks</td></tr>
+          <tr><td><strong>Ethiopia</strong></td><td>East Africa</td><td>Maintained Christian traditions; long history of independence; traded with Middle East &amp; Indian Ocean world</td></tr>
+          <tr><td><strong>Kongo</strong></td><td>Central Africa</td><td>Regional power with organized government and trade networks</td></tr>
+          <tr><td><strong>Zulu</strong></td><td>Southern Africa</td><td>Organized under strong warrior traditions; later became a major resistance force against colonization</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 8px;">Africa's Role in Global Trade</h3>
+        <div class="ss-callout" style="background:#14101f;">
+          <ul style="margin:0;padding-left:18px;font-size:13px;line-height:1.7;color:#d1d5db;">
+            <li>West African empires controlled major overland and coastal trade routes</li>
+            <li>Exported gold, ivory, spices, and hardwoods to Europe</li>
+            <li>Ethiopia connected to Indian Ocean trade networks (Middle East, India)</li>
+            <li>Africa was a key node in the <strong>Triangular Trade</strong> (Atlantic slave trade):
+              <ul style="margin:4px 0;padding-left:18px;">
+                <li>Africa → enslaved people via Middle Passage → Caribbean/Americas</li>
+                <li>Americas → sugar, rum, molasses → Europe</li>
+                <li>Europe → guns, cloth, manufactured goods → Africa</li>
+              </ul>
+            </li>
+            <li>Multiple slave trade routes: Arab/Berber (trans-Saharan), British/Dutch (Atlantic), Portuguese/French (Atlantic &amp; Indian Ocean)</li>
+          </ul>
+        </div>
+        <div class="ss-keynote"><strong>Key point:</strong> Africa had hundreds of distinct kingdoms, languages, and cultures. The idea that Africa was "primitive" before Europeans arrived is a myth and stereotype used to justify colonization.</div>
+
+        <h3 style="font-size:15px;color:#c4b5fd;margin:20px 0 10px;">✅ Review Questions</h3>
+        <div class="ss-score-bar">
+          <div><div style="font-size:13px;color:#9ca3af;">Score</div><div><span class="ss-score-num" id="ss-score-u1afr">0</span><span style="color:#555;font-size:14px;"> / 3</span></div></div>
+          <button class="ss-reset-btn" onclick="ssResetQuiz('u1afr')">↺ Reset</button>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u1afr" data-ssqid="u1afr1">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q1.</span> Which resource most influenced West African empires before colonization?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr1-A" onclick="ssCheckMCQ('u1afr1','u1afr','A','B',`Gold (along with ivory) made empires like the Ashanti wealthy and powerful.`)">A. Oil</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr1-B" onclick="ssCheckMCQ('u1afr1','u1afr','B','B',`Gold (along with ivory) made empires like the Ashanti wealthy and powerful.`)">B. Gold</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr1-C" onclick="ssCheckMCQ('u1afr1','u1afr','C','B',`Gold (along with ivory) made empires like the Ashanti wealthy and powerful.`)">C. Coal</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr1-D" onclick="ssCheckMCQ('u1afr1','u1afr','D','B',`Gold (along with ivory) made empires like the Ashanti wealthy and powerful.`)">D. Rubber</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u1afr1"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u1afr" data-ssqid="u1afr2">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q2.</span> Which statement best describes Africa in the 1750s?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr2-A" onclick="ssCheckMCQ('u1afr2','u1afr','A','B',`Africa actively traded with Europe and Asia and had advanced empires.`)">A. Isolated and primitive</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr2-B" onclick="ssCheckMCQ('u1afr2','u1afr','B','B',`Africa actively traded with Europe and Asia and had advanced empires.`)">B. Actively traded with Europe &amp; Asia</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr2-C" onclick="ssCheckMCQ('u1afr2','u1afr','C','B',`Africa actively traded with Europe and Asia and had advanced empires.`)">C. Had no governments</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr2-D" onclick="ssCheckMCQ('u1afr2','u1afr','D','B',`Africa actively traded with Europe and Asia and had advanced empires.`)">D. Fully colonized by Europe</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u1afr2"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u1afr" data-ssqid="u1afr3">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q3.</span> The Ashanti Empire gained power largely due to ___?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr3-A" onclick="ssCheckMCQ('u1afr3','u1afr','A','B',`The Ashanti controlled major gold and trade routes in West Africa.`)">A. A large navy</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr3-B" onclick="ssCheckMCQ('u1afr3','u1afr','B','B',`The Ashanti controlled major gold and trade routes in West Africa.`)">B. Control of trade routes</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr3-C" onclick="ssCheckMCQ('u1afr3','u1afr','C','B',`The Ashanti controlled major gold and trade routes in West Africa.`)">C. European alliances only</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u1afr3-D" onclick="ssCheckMCQ('u1afr3','u1afr','D','B',`The Ashanti controlled major gold and trade routes in West Africa.`)">D. Industrial factories</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u1afr3"></div>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="section" id="u1-s7">
+        <div class="section-title purple">7 · Key Terms</div>
+        <div class="ss-term-grid">
+          <div class="ss-term-card"><div class="ss-term">Absolutism</div><div class="ss-term-def">A political system where a monarch holds total, unlimited power over the state.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Divine Right</div><div class="ss-term-def">The belief that a monarch's authority comes directly from God, making them above the law.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Natural Rights</div><div class="ss-term-def">Rights all people are born with (Locke: life, liberty, property) that governments must protect.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Popular Sovereignty</div><div class="ss-term-def">The principle that government authority comes from the consent of the people (Rousseau).</div></div>
+          <div class="ss-term-card"><div class="ss-term">Separation of Powers</div><div class="ss-term-def">Montesquieu's idea that government should be divided into branches so no one person has total control.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Enlightenment</div><div class="ss-term-def">18th-century intellectual movement using reason and logic to challenge tradition, religion, and absolute rule.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Social Contract</div><div class="ss-term-def">Rousseau's idea that people agree to be governed in exchange for government protecting their rights.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Westernization</div><div class="ss-term-def">Peter the Great's policy of adopting European customs, technology, and education in Russia.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Sakoku</div><div class="ss-term-def">Japan's "closed country" isolationist policy under the Tokugawa Shogunate.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Canton System</div><div class="ss-term-def">Qing China's policy restricting European trade to a single port (Canton).</div></div>
+          <div class="ss-term-card"><div class="ss-term">Constitutional Monarchy</div><div class="ss-term-def">A system where a monarch's power is limited by a constitution or parliament — opposite of absolutism.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Estates System</div><div class="ss-term-def">France's social hierarchy (Clergy, Nobles, Everyone else) that created extreme inequality before the Revolution.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Daimyo</div><div class="ss-term-def">Feudal lords in Tokugawa Japan required to live in Edo under the shogun's watch.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Jizya Tax</div><div class="ss-term-def">Tax reimposed on non-Muslims by Aurangzeb in the Mughal Empire, reversing Akbar's tolerant policies.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Triangular Trade</div><div class="ss-term-def">The three-way trade system connecting Europe, Africa, and the Americas through goods and enslaved people.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Middle Passage</div><div class="ss-term-def">The brutal sea journey enslaved Africans were forced to make across the Atlantic Ocean to the Americas.</div></div>
+        </div>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="section" id="u1-s8">
+        <div class="section-title purple">8 · Comparison Chart — All Monarchs</div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Monarch</th><th>Country</th><th>Key Actions</th><th>Symbol of Power</th></tr>
+          <tr><td><strong>Louis XIV</strong></td><td>France</td><td>Built Versailles; controlled nobility; "I am the state"</td><td>The Sun / Versailles</td></tr>
+          <tr><td><strong>Peter the Great</strong></td><td>Russia</td><td>Westernization; built navy; founded St. Petersburg</td><td>Military modernization</td></tr>
+          <tr><td><strong>Philip II</strong></td><td>Spain</td><td>Spanish Armada (1588); defender of Catholicism</td><td>Escorial Palace</td></tr>
+          <tr><td><strong>Tokugawa Shogun</strong></td><td>Japan</td><td>Sakoku isolation; daimyo control; rigid class system</td><td>Edo Castle</td></tr>
+          <tr><td><strong>Akbar / Aurangzeb</strong></td><td>India (Mughal)</td><td>Akbar: tolerance; Aurangzeb: strict Islamic law</td><td>Taj Mahal</td></tr>
+          <tr><td><strong>Qianlong Emperor</strong></td><td>China (Qing)</td><td>Canton System; rejected British trade (1793 letter)</td><td>Forbidden City</td></tr>
+        </table>
+        </div>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="section" id="u1-s9">
+        <div class="section-title purple">9 · Practice Questions</div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:0 0 10px;">Short Answer (10 questions)</h3>
+        <ol style="font-size:13px;line-height:1.8;color:#d1d5db;padding-left:20px;margin-bottom:20px;">
+          <li>Define absolutism and explain how Divine Right justified it. Give one specific European example.</li>
+          <li>How did Peter the Great demonstrate absolute power while modernizing Russia? Name two specific actions.</li>
+          <li>Compare how Louis XIV and the Qing Dynasty emperor used architecture to project power.</li>
+          <li>Explain the difference between Akbar and Aurangzeb's approach to religion. How did these policies affect the empire?</li>
+          <li>Which Asian empire best represents absolutism? Support with at least two pieces of evidence.</li>
+          <li>Identify the four main Enlightenment thinkers and each one's central idea.</li>
+          <li>How did Locke's ideas challenge absolutism? Use a specific idea from the lesson.</li>
+          <li>How did Montesquieu's separation of powers influence modern democracies?</li>
+          <li>Describe the Estates System. How did inequality contribute to the French Revolution?</li>
+          <li>Compare the causes and outcomes of the American and French Revolutions. What do they share?</li>
+        </ol>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:0 0 10px;">Extended Response — Choose One</h3>
+        <div class="ss-card-grid">
+          <div class="ss-card"><div class="ss-card-title">1 · "Power" as an Enduring Issue</div><div class="ss-card-body">Using at least three examples from Unit 1 (across two+ empires), explain how the struggle for and abuse of power has been a recurring problem.</div></div>
+          <div class="ss-card"><div class="ss-card-title">2 · DBQ Practice</div><div class="ss-card-body">Using primary source excerpts (Bossuet, Locke, Rousseau, Montesquieu, and the two revolutionary declarations), explain how Enlightenment ideas challenged absolute rule and led to revolution. Cite at least three.</div></div>
+          <div class="ss-card"><div class="ss-card-title">3 · Comparison Essay</div><div class="ss-card-body">Compare absolutism in Europe and Asia between 1500–1800 — similarities and differences in how rulers gained, maintained, and lost power. Use at least three specific rulers.</div></div>
+        </div>
+      </div>
+    </div><!-- /socst-u1 -->
+
+    <!-- ══════════════ UNIT 2 ══════════════ -->
+    <div id="socst-u2" class="tab-content">
+      <div class="socst-header" style="border-radius:10px;border-bottom:none;border:1px solid #2a2140;margin-bottom:22px;padding:26px 20px;">
+        <p style="font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#a78bfa;font-weight:700;margin-bottom:6px;">Global History &amp; Geography · Unit 2</p>
+        <h1 style="font-size:24px;">Revolutions &amp; Scientific Thought</h1>
+        <div class="socst-sub">Scientific Revolution · Enlightenment · Latin American Revolutions · French Revolution &amp; Napoleon</div>
+      </div>
+
+      <div class="ss-toc">
+        <div class="ss-toc-title">📑 Table of Contents</div>
+        <div class="ss-toc-links">
+          <a href="#u2-l1">1. The Scientific Revolution</a>
+          <a href="#u2-l2">2. Impacts of the Scientific Revolution</a>
+          <a href="#u2-l3">3. Latin American Revolutions</a>
+          <a href="#u2-l4">4. French Revolution &amp; Napoleon</a>
+          <a href="#u2-vocab">5. Key Vocabulary</a>
+        </div>
+      </div>
+
+      <!-- Lesson 1 -->
+      <div class="section" id="u2-l1">
+        <div class="section-title purple">Lesson 1 · The Scientific Revolution</div>
+        <div class="ss-callout"><span class="ss-callout-label">Theme</span>A shift from <strong>faith-based</strong> to <strong>evidence-based</strong> thinking — observation and experimentation over tradition and scripture.</div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:6px 0 8px;">Background Causes</h3>
+        <ul style="font-size:13px;line-height:1.7;color:#d1d5db;padding-left:20px;margin-bottom:16px;">
+          <li>Renaissance curiosity &amp; humanism</li>
+          <li>Printing press spreading new ideas</li>
+          <li>Protestant Reformation challenging Church authority</li>
+          <li>Age of Exploration bringing new discoveries</li>
+        </ul>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Figure</th><th>Role</th><th>Key Contribution</th></tr>
+          <tr><td><strong>Copernicus</strong></td><td>Astronomer</td><td>Heliocentric theory — Earth and planets revolve around the Sun, not the other way around</td></tr>
+          <tr><td><strong>Galileo Galilei</strong></td><td>Astronomer &amp; Physicist</td><td>Used the telescope to support heliocentrism; tried by the Inquisition for contradicting Church teachings</td></tr>
+          <tr><td><strong>Isaac Newton</strong></td><td>Mathematician &amp; Physicist</td><td>Laws of motion &amp; gravity; showed the universe operates by natural laws</td></tr>
+        </table>
+        </div>
+        <div class="ss-quote">"I hold that the Sun is situated motionless in the center of the revolution of the heavenly bodies, and does not change its place; and that the Earth turns upon itself and also moves around the Sun."<cite>— Galileo, Letter to the Grand Duchess Christina (1615)</cite></div>
+        <div class="ss-def">
+          <div class="ss-def-term">Quote Analysis</div>
+          <div class="ss-def-body">
+            <strong>Galileo's argument:</strong> the Sun is stationary; the Earth orbits it.<br>
+            <strong>Why the Church opposed it:</strong> it contradicted scripture placing Earth at the center.<br>
+            <strong>Enduring issue:</strong> conflict between tradition/faith &amp; new ideas.
+          </div>
+        </div>
+        <div class="ss-keynote"><strong>How it challenged authority:</strong> Scientific observation proved it could explain the universe better than tradition or scripture. Galileo's telescope showed Earth revolved around the Sun — directly contradicting Church teachings.</div>
+
+        <h3 style="font-size:15px;color:#c4b5fd;margin:20px 0 10px;">✅ Review Questions</h3>
+        <div class="ss-score-bar">
+          <div><div style="font-size:13px;color:#9ca3af;">Score</div><div><span class="ss-score-num" id="ss-score-u2l1">0</span><span style="color:#555;font-size:14px;"> / 3</span></div></div>
+          <button class="ss-reset-btn" onclick="ssResetQuiz('u2l1')">↺ Reset</button>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l1" data-ssqid="u2l1q1">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q1.</span> Which scientist is associated with the laws of motion &amp; gravity?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q1-A" onclick="ssCheckMCQ('u2l1q1','u2l1','A','C',`Isaac Newton described the laws of motion and universal gravitation.`)">A. Copernicus</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q1-B" onclick="ssCheckMCQ('u2l1q1','u2l1','B','C',`Isaac Newton described the laws of motion and universal gravitation.`)">B. Galileo</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q1-C" onclick="ssCheckMCQ('u2l1q1','u2l1','C','C',`Isaac Newton described the laws of motion and universal gravitation.`)">C. Newton</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q1-D" onclick="ssCheckMCQ('u2l1q1','u2l1','D','C',`Isaac Newton described the laws of motion and universal gravitation.`)">D. Kepler</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l1q1"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l1" data-ssqid="u2l1q2">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q2.</span> Which idea did Copernicus and Galileo support?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q2-A" onclick="ssCheckMCQ('u2l1q2','u2l1','A','B',`Both supported the heliocentric (Sun-centered) model.`)">A. Geocentric theory</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q2-B" onclick="ssCheckMCQ('u2l1q2','u2l1','B','B',`Both supported the heliocentric (Sun-centered) model.`)">B. Heliocentric theory</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q2-C" onclick="ssCheckMCQ('u2l1q2','u2l1','C','B',`Both supported the heliocentric (Sun-centered) model.`)">C. Theory of evolution</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q2-D" onclick="ssCheckMCQ('u2l1q2','u2l1','D','B',`Both supported the heliocentric (Sun-centered) model.`)">D. Theory of relativity</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l1q2"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l1" data-ssqid="u2l1q3">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q3.</span> Which enduring issue is most connected to the Scientific Revolution?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q3-A" onclick="ssCheckMCQ('u2l1q3','u2l1','A','B',`The Scientific Revolution centered on the conflict between tradition/faith and new ideas.`)">A. Scarcity</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q3-B" onclick="ssCheckMCQ('u2l1q3','u2l1','B','B',`The Scientific Revolution centered on the conflict between tradition/faith and new ideas.`)">B. Conflict between tradition &amp; new ideas</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q3-C" onclick="ssCheckMCQ('u2l1q3','u2l1','C','B',`The Scientific Revolution centered on the conflict between tradition/faith and new ideas.`)">C. Human rights violations</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l1q3-D" onclick="ssCheckMCQ('u2l1q3','u2l1','D','B',`The Scientific Revolution centered on the conflict between tradition/faith and new ideas.`)">D. Environment</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l1q3"></div>
+        </div>
+      </div>
+
+      <!-- Lesson 2 -->
+      <div class="section" id="u2-l2">
+        <div class="section-title purple">Lesson 2 · Impacts of the Scientific Revolution</div>
+        <div class="ss-callout"><span class="ss-callout-label">Theme</span>The Scientific Revolution created a culture of questioning that directly inspired the <strong>Enlightenment</strong> — new ways of thinking about society, government, and human rights.</div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Area of Impact</th><th>What Changed</th><th>Long-Term Effect</th></tr>
+          <tr><td><strong>Intellectual</strong></td><td>Rise of the scientific method</td><td>Reliance on reason &amp; evidence over faith</td></tr>
+          <tr><td><strong>Social</strong></td><td>Weakening of Church authority</td><td>Questioning of tradition &amp; established power</td></tr>
+          <tr><td><strong>Political</strong></td><td>Ideas about natural laws</td><td>Influenced Enlightenment political thinkers</td></tr>
+          <tr><td><strong>Global</strong></td><td>Inspired biology, chemistry, astronomy</td><td>Broader scientific curiosity worldwide</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 10px;">Key Documents</h3>
+        <div class="ss-card-grid">
+          <div class="ss-card"><div class="ss-card-title">Galileo Trial (1633)</div><div class="ss-card-body">Heliocentrism vs. Church → weakened Church authority, encouraged questioning tradition.<br><em>Enduring issue: Power and Authority</em></div></div>
+          <div class="ss-card"><div class="ss-card-title">Newton's <em>Principia</em> (1687)</div><div class="ss-card-body">Universe explained by natural laws (motion, gravity) → encouraged belief in reason over faith.<br><em>Enduring issue: Conflict between tradition &amp; new ideas</em></div></div>
+          <div class="ss-card"><div class="ss-card-title">"Seed of the Enlightenment"</div><div class="ss-card-body">Scientific methods influenced new ways of thinking about society/government → inspired Locke, Montesquieu, Rousseau.</div></div>
+        </div>
+        <div class="ss-keynote"><strong>Key Connection:</strong> If you can question the Church in science, you can question kings in politics. Natural laws in physics → natural rights in politics. Evidence-based thinking → demand for just government.</div>
+
+        <h3 style="font-size:15px;color:#c4b5fd;margin:20px 0 10px;">✅ Review Questions</h3>
+        <div class="ss-score-bar">
+          <div><div style="font-size:13px;color:#9ca3af;">Score</div><div><span class="ss-score-num" id="ss-score-u2l2">0</span><span style="color:#555;font-size:14px;"> / 3</span></div></div>
+          <button class="ss-reset-btn" onclick="ssResetQuiz('u2l2')">↺ Reset</button>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l2" data-ssqid="u2l2q1">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q1.</span> Which was an important effect of the Scientific Revolution?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q1-A" onclick="ssCheckMCQ('u2l2q1','u2l2','A','B',`It led to greater reliance on reason and observation.`)">A. Renewed faith in Church teachings</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q1-B" onclick="ssCheckMCQ('u2l2q1','u2l2','B','B',`It led to greater reliance on reason and observation.`)">B. Greater reliance on reason &amp; observation</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q1-C" onclick="ssCheckMCQ('u2l2q1','u2l2','C','B',`It led to greater reliance on reason and observation.`)">C. Expansion of feudalism</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q1-D" onclick="ssCheckMCQ('u2l2q1','u2l2','D','B',`It led to greater reliance on reason and observation.`)">D. Spread of mercantilism</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l2q1"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l2" data-ssqid="u2l2q2">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q2.</span> The Scientific Revolution most directly influenced which later movement?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q2-A" onclick="ssCheckMCQ('u2l2q2','u2l2','A','A',`Its culture of questioning directly inspired the Enlightenment.`)">A. Enlightenment</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q2-B" onclick="ssCheckMCQ('u2l2q2','u2l2','B','A',`Its culture of questioning directly inspired the Enlightenment.`)">B. Crusades</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q2-C" onclick="ssCheckMCQ('u2l2q2','u2l2','C','A',`Its culture of questioning directly inspired the Enlightenment.`)">C. Renaissance</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q2-D" onclick="ssCheckMCQ('u2l2q2','u2l2','D','A',`Its culture of questioning directly inspired the Enlightenment.`)">D. Age of Imperialism</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l2q2"></div>
+        </div>
+        <div class="ss-mcq-item" data-ssgroup="u2l2" data-ssqid="u2l2q3">
+          <div class="ss-mcq-q"><span class="ss-mcq-num">Q3.</span> The conflict between Galileo &amp; the Catholic Church is an example of which enduring issue?</div>
+          <div class="ss-mcq-choices">
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q3-A" onclick="ssCheckMCQ('u2l2q3','u2l2','A','B',`It is a classic example of Power and Authority.`)">A. Scarcity</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q3-B" onclick="ssCheckMCQ('u2l2q3','u2l2','B','B',`It is a classic example of Power and Authority.`)">B. Power and Authority</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q3-C" onclick="ssCheckMCQ('u2l2q3','u2l2','C','B',`It is a classic example of Power and Authority.`)">C. Environment</button>
+            <button class="ss-mcq-choice" id="ss-mcq-u2l2q3-D" onclick="ssCheckMCQ('u2l2q3','u2l2','D','B',`It is a classic example of Power and Authority.`)">D. Inequality</button>
+          </div>
+          <div class="ss-mcq-exp" id="ss-mcq-exp-u2l2q3"></div>
+        </div>
+      </div>
+
+      <!-- Lesson 3 -->
+      <div class="section" id="u2-l3">
+        <div class="section-title purple">Lesson 3 · Latin American Revolutions</div>
+        <div class="ss-callout"><span class="ss-callout-label">Theme</span>Enlightenment ideas + social inequality + weakened colonial powers = a wave of independence movements across Latin America in the early 1800s.</div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:6px 0 8px;">Background Causes</h3>
+        <ul style="font-size:13px;line-height:1.7;color:#d1d5db;padding-left:20px;margin-bottom:16px;">
+          <li>Enlightenment ideas (rights, liberty, equality)</li>
+          <li>Success of the American &amp; French Revolutions</li>
+          <li>Social inequality: Peninsulares vs. Creoles, Mestizos, Indigenous peoples</li>
+          <li>Spain &amp; Portugal weakened by the Napoleonic Wars</li>
+        </ul>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:6px 0 8px;">Colonial Class System</h3>
+        <div class="ss-pyramid">
+          <div class="ss-pyramid-row"><strong>Peninsulares</strong> — Spaniards born in Spain; highest rank; controlled government &amp; military positions</div>
+          <div class="ss-pyramid-row"><strong>Creoles</strong> — People of Spanish descent born in the Americas; wealthy but below Peninsulares; often led independence movements</div>
+          <div class="ss-pyramid-row"><strong>Mestizos</strong> — Mixed Spanish &amp; Indigenous heritage</div>
+          <div class="ss-pyramid-row"><strong>Native Americans</strong> — Indigenous peoples of the Americas</div>
+          <div class="ss-pyramid-row"><strong>Enslaved Persons</strong> — Brought from Africa and the Caribbean; lowest tier</div>
+        </div>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Leader</th><th>Title / Achievement</th></tr>
+          <tr><td><strong>Simón Bolívar</strong></td><td>The Liberator — led independence movements across northern South America; believed in a unified, self-governing Latin America</td></tr>
+          <tr><td><strong>José de San Martín</strong></td><td>General &amp; Liberator — freed Argentina, Chile, and Peru from Spanish rule through military campaigns across the Andes</td></tr>
+          <tr><td><strong>Toussaint L'Ouverture</strong></td><td>Led the Haitian Revolution — the only successful slave revolt in history; Haiti became the first Black republic (1804)</td></tr>
+        </table>
+        </div>
+        <div class="ss-quote">"We are not Europeans; we are not Indians; we are but a mixed species…"<cite>— Simón Bolívar, Jamaica Letter (1815)</cite></div>
+        <div class="ss-card-grid">
+          <div class="ss-card"><div class="ss-card-title">What Bolívar is saying</div><div class="ss-card-body">Latin Americans have a unique identity — neither fully European nor fully Indigenous, but a mixed people. He is building nationalism &amp; unity among the colonies, and arguing Latin America deserves self-governance, separate from Spain.</div></div>
+          <div class="ss-card"><div class="ss-card-title">How it reflects Enlightenment ideas</div><div class="ss-card-body"><strong>Self-determination:</strong> people should govern themselves instead of being ruled by outsiders. <strong>Natural rights:</strong> freedom, equality, independence. <strong>Rousseau's General Will:</strong> governments should reflect the people, not foreign rulers.</div></div>
+        </div>
+      </div>
+
+      <!-- Lesson 4 -->
+      <div class="section" id="u2-l4">
+        <div class="section-title purple">Lesson 4 · French Revolution &amp; Napoleon</div>
+        <div class="ss-callout"><span class="ss-callout-label">Theme</span>The French Revolution ended monarchy and spread Enlightenment ideals, but Napoleon's rise showed how revolutionary goals can be both advanced and betrayed by one leader.</div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:6px 0 8px;">Key Events Timeline</h3>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Year</th><th>Event</th><th>Significance</th></tr>
+          <tr><td><strong>1789</strong></td><td>Storming of the Bastille</td><td>Symbol of revolution — people seized the royal prison, marking open revolt against the monarchy</td></tr>
+          <tr><td><strong>1789</strong></td><td>Declaration of the Rights of Man</td><td>Enshrined natural rights — liberty, equality, popular sovereignty — directly influenced by Enlightenment ideas</td></tr>
+          <tr><td><strong>1793–94</strong></td><td>Reign of Terror</td><td>Robespierre led mass executions of perceived enemies; ~17,000 officially executed</td></tr>
+          <tr><td><strong>1795–99</strong></td><td>The Directory</td><td>Weak, corrupt government after the Terror; created instability that opened the door for Napoleon</td></tr>
+          <tr><td><strong>1799</strong></td><td>Napoleon's Coup d'État</td><td>Seized power through a military takeover; ended the Revolution and began the Napoleonic era</td></tr>
+          <tr><td><strong>1804</strong></td><td>Napoleon Declares Himself Emperor</td><td>Ironic reversal — the revolution that ended monarchy produced a new emperor</td></tr>
+          <tr><td><strong>1815</strong></td><td>Defeat at Waterloo</td><td>Napoleon's final defeat; exiled to St. Helena; Congress of Vienna tried to restore the old order</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 8px;">Outcomes</h3>
+        <div class="ss-table-wrap">
+        <table class="ss-table">
+          <tr><th>Outcome</th><th>Explanation</th><th>Enlightenment Connection</th></tr>
+          <tr><td><strong>End of Monarchy</strong></td><td>King Louis XVI executed</td><td>Against absolutism; for popular sovereignty</td></tr>
+          <tr><td><strong>Rise of Nationalism</strong></td><td>People united under the tricolor flag</td><td>Rousseau's General Will</td></tr>
+          <tr><td><strong>Social Reforms</strong></td><td>Abolition of feudal privileges</td><td>Equality under law</td></tr>
+          <tr><td><strong>Napoleonic Code</strong></td><td>Standardized French law</td><td>Equality before the law (partial)</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:15px;color:#c4b5fd;margin:18px 0 8px;">Napoleon: Hero or Villain?</h3>
+        <div class="comparison-grid">
+          <div class="comparison-box good"><strong>Hero</strong>Napoleonic Code spread equality under law; education reform; spread revolutionary ideals across Europe</div>
+          <div class="comparison-box bad"><strong>Villain</strong>Declared himself Emperor; censored the press; re-introduced slavery in Haiti; millions died in his wars</div>
+        </div>
+        <div class="ss-written-item" style="margin-top:16px;">
+          <div class="ss-written-q"><span>Discussion:</span> Did the French Revolution achieve its goals, or were they lost under Napoleon?</div>
+          <button class="ss-written-btn" onclick="ssRevealWritten('u2l4d')">Show Answer</button>
+          <div class="ss-written-answer" id="ss-written-u2l4d">The French Revolution achieved its goal of ending monarchy, but Napoleon replaced it with his own empire. However, he also spread revolutionary ideals like equality before the law through the Napoleonic Code.</div>
+        </div>
+      </div>
+
+      <!-- Key Vocabulary -->
+      <div class="section" id="u2-vocab">
+        <div class="section-title purple">Key Vocabulary</div>
+        <p style="font-size:13px;color:#9ca3af;margin-bottom:16px;">Tap the card to flip · use the arrows to move through all 12 terms.</p>
+        <div class="ss-fc-wrapper">
+          <div class="ss-fc-counter" id="ss-fc-counter">Card 1 of 12</div>
+          <div class="ss-fc-scene" onclick="ssFlipCard()">
+            <div class="ss-fc-inner" id="ss-fc-inner">
+              <div class="ss-fc-front"><div><div class="ss-fc-front-text" id="ss-fc-front">Heliocentric Theory</div><div class="ss-fc-hint">Tap to flip</div></div></div>
+              <div class="ss-fc-back"><div class="ss-fc-back-text" id="ss-fc-back">The idea that the Sun is at the center of the solar system, and Earth and other planets orbit it.</div></div>
+            </div>
+          </div>
+          <div class="ss-fc-nav">
+            <button class="ss-fc-nav-btn" onclick="ssPrevCard()">← Prev</button>
+            <button class="ss-fc-nav-btn" onclick="ssShuffleCards()">🔀 Shuffle</button>
+            <button class="ss-fc-nav-btn" onclick="ssNextCard()">Next →</button>
+          </div>
+        </div>
+
+        <h3 style="font-size:15px;color:#c4b5fd;margin:24px 0 10px;">All Terms</h3>
+        <div class="ss-term-grid">
+          <div class="ss-term-card"><div class="ss-term">Heliocentric Theory</div><div class="ss-term-def">The idea that the Sun is at the center of the solar system, and Earth and other planets orbit it. Proposed by Copernicus, supported by Galileo.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Geocentric Theory</div><div class="ss-term-def">The old belief that Earth is the center of the universe, with everything revolving around it. Supported by the Church; disproved by Copernicus &amp; Galileo.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Scientific Method</div><div class="ss-term-def">A process for testing ideas using observation, hypothesis, experimentation, and conclusion. The foundation of modern science.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Enlightenment</div><div class="ss-term-def">18th-century intellectual movement applying reason to human society, government, and rights. Directly inspired by the Scientific Revolution.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Natural Rights</div><div class="ss-term-def">Rights people are born with that cannot be taken away — life, liberty, and property (Locke). Central to both the French and Latin American Revolutions.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Peninsulares</div><div class="ss-term-def">Spaniards born in Spain who held the highest rank in the colonial class system of Latin America.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Creoles</div><div class="ss-term-def">People of Spanish descent born in the Americas. Despite being wealthy, they were below Peninsulares and often led independence movements.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Coup d'État</div><div class="ss-term-def">A sudden, often military seizure of power from a government. Napoleon used a coup d'état in 1799 to take control of France.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Napoleonic Code</div><div class="ss-term-def">Napoleon's legal reforms that standardized French law. Spread across Europe through conquest.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Reign of Terror</div><div class="ss-term-def">A radical phase of the French Revolution (1793–94) led by Robespierre. Thousands were executed by guillotine as enemies of the revolution.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Nationalism</div><div class="ss-term-def">Pride in one's nation and desire for self-governance. Fueled by both the French Revolution and Latin American independence movements.</div></div>
+          <div class="ss-term-card"><div class="ss-term">Self-Determination</div><div class="ss-term-def">The Enlightenment idea that people have the right to govern themselves rather than be ruled by a foreign power — key idea for Bolívar.</div></div>
+        </div>
+      </div>
+    </div><!-- /socst-u2 -->
+
+  </div><!-- /container -->
+</div><!-- /subject-socst -->
 
 <!-- ══ FOOTER ══ -->
 <div style="text-align:center;padding:22px 20px;background:#0a0a0a;color:#6b7280;font-size:13px;letter-spacing:0.3px;">
