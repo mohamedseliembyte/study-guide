@@ -904,6 +904,32 @@
       display: flex; align-items: center; gap: 8px;
     }
 
+    /* ── Statistics tab (st-*) — mirrors alg flashcard/MCQ styles, kept independent ── */
+    .st-fc-dot { width: 8px; height: 8px; border-radius: 50%; background: #1a1a1a; cursor: pointer; transition: background .2s; }
+    .st-fc-dot.active { background: #1d4ed8; }
+    .st-mcq-choice {
+      background: #111111; border: 2px solid #2a2a2a; border-radius: 8px;
+      padding: 10px 12px; cursor: pointer; font-size: 13px; color: #ccc;
+      transition: all .2s; text-align: left;
+    }
+    .st-mcq-choice:hover:not([disabled]) { border-color: #1d4ed8; color: #f0f0f0; }
+    .st-mcq-choice.correct { background: #0f1a0a; border-color: #22c55e; color: #4ade80; }
+    .st-mcq-choice.wrong   { background: #1a0a0a; border-color: #ef4444; color: #f87171; }
+    .st-mcq-choice.reveal  { background: #0f1a0a; border-color: #22c55e; color: #4ade80; opacity: .7; }
+    .st-mcq-explain {
+      margin-top: 10px; padding: 10px 12px; background: #0f172a;
+      border-left: 3px solid #1d4ed8; border-radius: 6px;
+      font-size: 13px; color: #aaa; display: none;
+    }
+    .st-mcq-explain.show { display: block; }
+    .st-table-wrap { overflow-x: auto; margin: 6px 0 4px; }
+    .st-table { width: 100%; border-collapse: collapse; font-size: 13px; background: #111111; border-radius: 8px; overflow: hidden; }
+    .st-table th { background: #0f172a; color: #93c5fd; text-align: left; padding: 9px 12px; font-weight: 700; font-size: 12px; border-bottom: 2px solid #1d4ed8; }
+    .st-table td { padding: 9px 12px; border-bottom: 1px solid #1f2937; color: #d1d5db; }
+    .st-table tr:last-child td { border-bottom: none; }
+    .st-table tr:nth-child(even) td { background: #0d1117; }
+    .st-table .st-row-total td, .st-table td.st-col-total { color: #93c5fd; font-weight: 700; }
+
 
     /* ══ ISLAM REVAMP ══ */
     .isl-disclaimer {
@@ -2488,6 +2514,7 @@
       <button class="alg-tab-btn" onclick="switchTab('alg1','units',this)">📖 Units</button>
       <button class="alg-tab-btn" onclick="switchTab('alg1','flashcards',this)">🃏 Flashcards</button>
       <button class="alg-tab-btn" onclick="switchTab('alg1','practice',this)">✏️ Practice</button>
+      <button class="alg-tab-btn" onclick="switchTab('alg1','statistics',this)">📈 Statistics</button>
       <button class="alg-tab-btn" onclick="switchTab('alg1','selfquiz',this)">✅ Self-Quiz</button>
     </div>
 
@@ -3196,6 +3223,201 @@
 </div>
     </div>
 
+    <!-- ── TAB: STATISTICS ── -->
+    <div class="tab-content" id="alg1-statistics">
+      <h2 class="alg-section-title">📈 Statistics &amp; Data Analysis</h2>
+      <p style="font-size:13px;color:#888;margin-bottom:20px;">Central tendency &amp; spread, box plots and outliers, scatter plots, linear regression, residuals, and two-way frequency tables — the data topics on the Algebra I Regents.</p>
+
+      <!-- Formulas -->
+      <h3 class="alg-section-title" style="font-size:16px">📐 Key Formulas</h3>
+      <div class="formula-grid">
+        <div class="formula-card"><div class="formula-label">Mean (average)</div><code class="formula-eq">x̄ = (Σx) / n</code></div>
+        <div class="formula-card"><div class="formula-label">Range</div><code class="formula-eq">Range = max − min</code></div>
+        <div class="formula-card"><div class="formula-label">Interquartile Range</div><code class="formula-eq">IQR = Q3 − Q1</code></div>
+        <div class="formula-card"><div class="formula-label">Low Outlier Boundary</div><code class="formula-eq">Q1 − 1.5 × IQR</code></div>
+        <div class="formula-card"><div class="formula-label">High Outlier Boundary</div><code class="formula-eq">Q3 + 1.5 × IQR</code></div>
+        <div class="formula-card"><div class="formula-label">Standard Deviation (pop.)</div><code class="formula-eq">σ = √( Σ(x − x̄)² / n )</code></div>
+        <div class="formula-card"><div class="formula-label">Line of Best Fit</div><code class="formula-eq">ŷ = ax + b</code></div>
+        <div class="formula-card"><div class="formula-label">Correlation Coefficient</div><code class="formula-eq">−1 ≤ r ≤ 1</code></div>
+        <div class="formula-card"><div class="formula-label">Residual</div><code class="formula-eq">residual = actual − predicted</code></div>
+        <div class="formula-card"><div class="formula-label">Conditional Rel. Freq.</div><code class="formula-eq">joint ÷ marginal (row/col total)</code></div>
+      </div>
+
+      <!-- Correlation quick reference -->
+      <h3 class="alg-section-title" style="font-size:16px;margin-top:28px">🔗 Reading Correlation (r)</h3>
+      <div class="st-table-wrap">
+        <table class="st-table">
+          <tr><th>Value of r</th><th>Meaning</th></tr>
+          <tr><td>r ≈ +1</td><td>Strong <strong>positive</strong> — as x increases, y increases</td></tr>
+          <tr><td>r ≈ −1</td><td>Strong <strong>negative</strong> — as x increases, y decreases</td></tr>
+          <tr><td>r ≈ 0</td><td><strong>No</strong> linear correlation — points show no clear line</td></tr>
+        </table>
+      </div>
+      <div class="unit-watchout"><strong>Watch out:</strong> Correlation is <em>not</em> causation. A strong r means a strong linear pattern — it does <em>not</em> prove one variable causes the other.</div>
+
+      <!-- Worked examples -->
+      <h3 class="alg-section-title" style="font-size:16px;margin-top:28px">📝 Worked Examples</h3>
+
+      <div class="mcq-item">
+        <div class="unit-section-title">Example 1 — Box Plot, Five-Number Summary &amp; Outliers</div>
+        <p style="font-size:13px;color:#bbb;line-height:1.6;margin:0 0 8px;">Data (already ordered): 4, 8, 8, 11, 14, 15, 21, 22, 24, 60</p>
+        <div class="unit-example">Median (Q2) = (14 + 15) / 2 = 14.5<br>Lower half {4, 8, 8, 11, 14} → Q1 = 8<br>Upper half {15, 21, 22, 24, 60} → Q3 = 22<br>IQR = Q3 − Q1 = 22 − 8 = 14<br>High boundary = Q3 + 1.5·IQR = 22 + 21 = 43<br><strong>60 &gt; 43 → 60 is an outlier ✓</strong><br>Five-number summary: 4, 8, 14.5, 22, 60</div>
+        <div class="unit-watchout"><strong>Tip:</strong> A value is an outlier only if it falls below Q1 − 1.5·IQR or above Q3 + 1.5·IQR — always show the boundary calculation.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="unit-section-title">Example 2 — Line of Best Fit &amp; Interpretation</div>
+        <p style="font-size:13px;color:#bbb;line-height:1.6;margin:0 0 8px;">A calculator's linear regression on (hours studied, test score) gives:</p>
+        <div class="unit-example">ŷ = 8.2x + 45,&nbsp;&nbsp; r = 0.94<br><br>Slope 8.2 → each extra hour studied predicts<br>about an 8.2-point higher score.<br>y-intercept 45 → predicted score with 0 hours.<br>r = 0.94 → strong positive correlation.<br><br>Predict the score for 5 hours:<br>ŷ = 8.2(5) + 45 = 41 + 45 = <strong>86</strong></div>
+        <div class="unit-watchout"><strong>Interpolation vs extrapolation:</strong> Predicting at x = 5 is interpolation (inside the data) and is reliable; predicting at x = 40 would be extrapolation and far less trustworthy.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="unit-section-title">Example 3 — Two-Way Frequency Table</div>
+        <p style="font-size:13px;color:#bbb;line-height:1.6;margin:0 0 8px;">60 students were asked whether they prefer dogs or cats:</p>
+        <div class="st-table-wrap">
+          <table class="st-table">
+            <tr><th>&nbsp;</th><th>Dogs</th><th>Cats</th><th>Total</th></tr>
+            <tr><td><strong>9th grade</strong></td><td>18</td><td>12</td><td class="st-col-total">30</td></tr>
+            <tr><td><strong>10th grade</strong></td><td>24</td><td>6</td><td class="st-col-total">30</td></tr>
+            <tr class="st-row-total"><td><strong>Total</strong></td><td>42</td><td>18</td><td>60</td></tr>
+          </table>
+        </div>
+        <div class="unit-example"><strong>Joint</strong> frequency (9th &amp; dogs) = 18<br><strong>Marginal</strong> frequency (all dogs) = 42<br><strong>Conditional</strong> rel. freq. of liking dogs <em>given</em> 9th grade:<br>= 18 / 30 = 0.60 = <strong>60%</strong></div>
+        <div class="unit-watchout"><strong>Watch out:</strong> "Given" tells you the denominator. <em>P(dog | 9th)</em> = 18/30, but <em>P(9th | dog)</em> = 18/42 — same cell, different totals.</div>
+      </div>
+
+      <!-- Flashcards -->
+      <h3 class="alg-section-title" style="font-size:16px;margin-top:28px">🃏 Vocabulary Flashcards</h3>
+      <p style="font-size:13px;color:#888;margin-bottom:18px;">Tap the card to flip it. Use the arrows to navigate.</p>
+      <div class="alg-fc-wrapper">
+        <div class="alg-fc-counter" id="st-fc-counter">Card 1 of 18</div>
+        <div class="alg-fc-scene" onclick="stFlipCard()">
+          <div class="alg-fc-card-inner" id="st-fc-inner">
+            <div class="alg-fc-front">
+              <div>
+                <div class="alg-fc-front-text" id="st-fc-front-text">Mean</div>
+                <div class="alg-fc-hint">Tap to reveal answer</div>
+              </div>
+            </div>
+            <div class="alg-fc-back">
+              <div class="alg-fc-back-text" id="st-fc-back-text">The average — add all the values and divide by how many there are.</div>
+            </div>
+          </div>
+        </div>
+        <div class="alg-fc-nav">
+          <button class="alg-fc-nav-btn" onclick="stPrevCard()">← Prev</button>
+          <button class="alg-fc-nav-btn" onclick="stShuffleCards()">🔀 Shuffle</button>
+          <button class="alg-fc-nav-btn" onclick="stNextCard()">Next →</button>
+        </div>
+        <div class="alg-fc-progress" id="st-fc-dots"><div class="st-fc-dot active" onclick="stGotoCard(0)"></div><div class="st-fc-dot" onclick="stGotoCard(1)"></div><div class="st-fc-dot" onclick="stGotoCard(2)"></div><div class="st-fc-dot" onclick="stGotoCard(3)"></div><div class="st-fc-dot" onclick="stGotoCard(4)"></div><div class="st-fc-dot" onclick="stGotoCard(5)"></div><div class="st-fc-dot" onclick="stGotoCard(6)"></div><div class="st-fc-dot" onclick="stGotoCard(7)"></div><div class="st-fc-dot" onclick="stGotoCard(8)"></div><div class="st-fc-dot" onclick="stGotoCard(9)"></div><div class="st-fc-dot" onclick="stGotoCard(10)"></div><div class="st-fc-dot" onclick="stGotoCard(11)"></div><div class="st-fc-dot" onclick="stGotoCard(12)"></div><div class="st-fc-dot" onclick="stGotoCard(13)"></div><div class="st-fc-dot" onclick="stGotoCard(14)"></div><div class="st-fc-dot" onclick="stGotoCard(15)"></div><div class="st-fc-dot" onclick="stGotoCard(16)"></div><div class="st-fc-dot" onclick="stGotoCard(17)"></div></div>
+      </div>
+
+      <!-- MCQ -->
+      <h2 class="alg-section-title" style="margin-top:32px">✏️ Multiple Choice Practice</h2>
+      <div class="quiz-score-bar">
+        <div>
+          <div class="quiz-score-label">Score</div>
+          <div><span class="quiz-score-num" id="st-score">0</span><span style="color:#c9a84c;font-size:14px"> / 12</span></div>
+        </div>
+        <button class="quiz-reset-btn" onclick="stResetQuiz()">↺ Reset Quiz</button>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q1.</span> Find the median of: 3, 7, 7, 2, 9</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-0-A" onclick="stCheckMCQ(0,'A','B',`Order the data: 2, 3, 7, 7, 9. The middle value is 7.`)">A. 5.6</button><button class="st-mcq-choice" id="st-mcq-0-B" onclick="stCheckMCQ(0,'B','B',`Order the data: 2, 3, 7, 7, 9. The middle value is 7.`)">B. 7</button><button class="st-mcq-choice" id="st-mcq-0-C" onclick="stCheckMCQ(0,'C','B',`Order the data: 2, 3, 7, 7, 9. The middle value is 7.`)">C. 9</button><button class="st-mcq-choice" id="st-mcq-0-D" onclick="stCheckMCQ(0,'D','B',`Order the data: 2, 3, 7, 7, 9. The middle value is 7.`)">D. 2</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-0"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q2.</span> What is the mode of: 4, 2, 4, 7, 9, 4?</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-1-A" onclick="stCheckMCQ(1,'A','C',`4 appears three times — more than any other value.`)">A. 2</button><button class="st-mcq-choice" id="st-mcq-1-B" onclick="stCheckMCQ(1,'B','C',`4 appears three times — more than any other value.`)">B. 7</button><button class="st-mcq-choice" id="st-mcq-1-C" onclick="stCheckMCQ(1,'C','C',`4 appears three times — more than any other value.`)">C. 4</button><button class="st-mcq-choice" id="st-mcq-1-D" onclick="stCheckMCQ(1,'D','C',`4 appears three times — more than any other value.`)">D. 5</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-1"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q3.</span> A data set has Q1 = 12 and Q3 = 20. What is the IQR?</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-2-A" onclick="stCheckMCQ(2,'A','B',`IQR = Q3 − Q1 = 20 − 12 = 8.`)">A. 16</button><button class="st-mcq-choice" id="st-mcq-2-B" onclick="stCheckMCQ(2,'B','B',`IQR = Q3 − Q1 = 20 − 12 = 8.`)">B. 8</button><button class="st-mcq-choice" id="st-mcq-2-C" onclick="stCheckMCQ(2,'C','B',`IQR = Q3 − Q1 = 20 − 12 = 8.`)">C. 32</button><button class="st-mcq-choice" id="st-mcq-2-D" onclick="stCheckMCQ(2,'D','B',`IQR = Q3 − Q1 = 20 − 12 = 8.`)">D. 12</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-2"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q4.</span> Find the range of: 15, 8, 22, 4, 19</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-3-A" onclick="stCheckMCQ(3,'A','C',`Range = max − min = 22 − 4 = 18.`)">A. 22</button><button class="st-mcq-choice" id="st-mcq-3-B" onclick="stCheckMCQ(3,'B','C',`Range = max − min = 22 − 4 = 18.`)">B. 14</button><button class="st-mcq-choice" id="st-mcq-3-C" onclick="stCheckMCQ(3,'C','C',`Range = max − min = 22 − 4 = 18.`)">C. 18</button><button class="st-mcq-choice" id="st-mcq-3-D" onclick="stCheckMCQ(3,'D','C',`Range = max − min = 22 − 4 = 18.`)">D. 26</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-3"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q5.</span> Which value of r shows the <em>strongest</em> correlation?</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-4-A" onclick="stCheckMCQ(4,'A','B',`Strength depends on how close r is to ±1. |−0.85| = 0.85 is the largest.`)">A. 0.20</button><button class="st-mcq-choice" id="st-mcq-4-B" onclick="stCheckMCQ(4,'B','B',`Strength depends on how close r is to ±1. |−0.85| = 0.85 is the largest.`)">B. −0.85</button><button class="st-mcq-choice" id="st-mcq-4-C" onclick="stCheckMCQ(4,'C','B',`Strength depends on how close r is to ±1. |−0.85| = 0.85 is the largest.`)">C. 0.50</button><button class="st-mcq-choice" id="st-mcq-4-D" onclick="stCheckMCQ(4,'D','B',`Strength depends on how close r is to ±1. |−0.85| = 0.85 is the largest.`)">D. −0.30</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-4"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q6.</span> On a scatter plot, y decreases as x increases. This shows:</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-5-A" onclick="stCheckMCQ(5,'A','B',`A downward trend is a negative correlation.`)">A. Positive correlation</button><button class="st-mcq-choice" id="st-mcq-5-B" onclick="stCheckMCQ(5,'B','B',`A downward trend is a negative correlation.`)">B. Negative correlation</button><button class="st-mcq-choice" id="st-mcq-5-C" onclick="stCheckMCQ(5,'C','B',`A downward trend is a negative correlation.`)">C. No correlation</button><button class="st-mcq-choice" id="st-mcq-5-D" onclick="stCheckMCQ(5,'D','B',`A downward trend is a negative correlation.`)">D. Causation</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-5"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q7.</span> A set has Q1 = 10, Q3 = 18. Which value is an outlier?</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-6-A" onclick="stCheckMCQ(6,'A','D',`IQR = 8. Upper boundary = 18 + 1.5·8 = 30. Only 31 exceeds it.`)">A. 28</button><button class="st-mcq-choice" id="st-mcq-6-B" onclick="stCheckMCQ(6,'B','D',`IQR = 8. Upper boundary = 18 + 1.5·8 = 30. Only 31 exceeds it.`)">B. 6</button><button class="st-mcq-choice" id="st-mcq-6-C" onclick="stCheckMCQ(6,'C','D',`IQR = 8. Upper boundary = 18 + 1.5·8 = 30. Only 31 exceeds it.`)">C. 19</button><button class="st-mcq-choice" id="st-mcq-6-D" onclick="stCheckMCQ(6,'D','D',`IQR = 8. Upper boundary = 18 + 1.5·8 = 30. Only 31 exceeds it.`)">D. 31</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-6"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q8.</span> A line predicts y = 47, but the actual value is 50. The residual is:</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-7-A" onclick="stCheckMCQ(7,'A','C',`Residual = actual − predicted = 50 − 47 = 3.`)">A. −3</button><button class="st-mcq-choice" id="st-mcq-7-B" onclick="stCheckMCQ(7,'B','C',`Residual = actual − predicted = 50 − 47 = 3.`)">B. 97</button><button class="st-mcq-choice" id="st-mcq-7-C" onclick="stCheckMCQ(7,'C','C',`Residual = actual − predicted = 50 − 47 = 3.`)">C. 3</button><button class="st-mcq-choice" id="st-mcq-7-D" onclick="stCheckMCQ(7,'D','C',`Residual = actual − predicted = 50 − 47 = 3.`)">D. 0</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-7"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q9.</span> A residual plot shows a clear curved (U-shaped) pattern. This means:</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-8-A" onclick="stCheckMCQ(8,'A','B',`A pattern in the residuals means a linear model is NOT a good fit.`)">A. A line fits the data well</button><button class="st-mcq-choice" id="st-mcq-8-B" onclick="stCheckMCQ(8,'B','B',`A pattern in the residuals means a linear model is NOT a good fit.`)">B. A linear model is not appropriate</button><button class="st-mcq-choice" id="st-mcq-8-C" onclick="stCheckMCQ(8,'C','B',`A pattern in the residuals means a linear model is NOT a good fit.`)">C. r = 1 exactly</button><button class="st-mcq-choice" id="st-mcq-8-D" onclick="stCheckMCQ(8,'D','B',`A pattern in the residuals means a linear model is NOT a good fit.`)">D. There are no outliers</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-8"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q10.</span> Predicting a value <em>inside</em> the range of the data is called:</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-9-A" onclick="stCheckMCQ(9,'A','A',`Inside the data range = interpolation; outside = extrapolation.`)">A. Interpolation</button><button class="st-mcq-choice" id="st-mcq-9-B" onclick="stCheckMCQ(9,'B','A',`Inside the data range = interpolation; outside = extrapolation.`)">B. Extrapolation</button><button class="st-mcq-choice" id="st-mcq-9-C" onclick="stCheckMCQ(9,'C','A',`Inside the data range = interpolation; outside = extrapolation.`)">C. Correlation</button><button class="st-mcq-choice" id="st-mcq-9-D" onclick="stCheckMCQ(9,'D','A',`Inside the data range = interpolation; outside = extrapolation.`)">D. Regression</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-9"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q11.</span> In a two-way frequency table, a <em>row total</em> is called a:</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-10-A" onclick="stCheckMCQ(10,'A','C',`Totals in the margins (row/column totals) are marginal frequencies.`)">A. Joint frequency</button><button class="st-mcq-choice" id="st-mcq-10-B" onclick="stCheckMCQ(10,'B','C',`Totals in the margins (row/column totals) are marginal frequencies.`)">B. Conditional frequency</button><button class="st-mcq-choice" id="st-mcq-10-C" onclick="stCheckMCQ(10,'C','C',`Totals in the margins (row/column totals) are marginal frequencies.`)">C. Marginal frequency</button><button class="st-mcq-choice" id="st-mcq-10-D" onclick="stCheckMCQ(10,'D','C',`Totals in the margins (row/column totals) are marginal frequencies.`)">D. Residual</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-10"></div>
+      </div>
+      <div class="mcq-item">
+        <div class="mcq-q"><span class="mcq-q-num">Q12.</span> The line of best fit is ŷ = 2x + 5. Predict y when x = 10.</div>
+        <div class="mcq-choices"><button class="st-mcq-choice" id="st-mcq-11-A" onclick="stCheckMCQ(11,'A','C',`ŷ = 2(10) + 5 = 20 + 5 = 25.`)">A. 17</button><button class="st-mcq-choice" id="st-mcq-11-B" onclick="stCheckMCQ(11,'B','C',`ŷ = 2(10) + 5 = 20 + 5 = 25.`)">B. 20</button><button class="st-mcq-choice" id="st-mcq-11-C" onclick="stCheckMCQ(11,'C','C',`ŷ = 2(10) + 5 = 20 + 5 = 25.`)">C. 25</button><button class="st-mcq-choice" id="st-mcq-11-D" onclick="stCheckMCQ(11,'D','C',`ŷ = 2(10) + 5 = 20 + 5 = 25.`)">D. 30</button></div>
+        <div class="st-mcq-explain" id="st-mcq-exp-11"></div>
+      </div>
+
+      <!-- Short answer -->
+      <h2 class="alg-section-title" style="margin-top:32px">✏️ Short Answer Practice</h2>
+      <p style="font-size:13px;color:#888;margin-bottom:14px;">Try each one, then tap "Show Answer."</p>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q1.</span> Find the median of: 4, 8, 15, 16, 23, 42</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(0)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-0">Median = (15 + 16) / 2 = 15.5</div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q2.</span> A five-number summary is Min = 3, Q1 = 7, Med = 10, Q3 = 15, Max = 40. Find the IQR.</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(1)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-1">IQR = Q3 − Q1 = 15 − 7 = 8</div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q3.</span> Using that data (Q3 = 15, IQR = 8), find the upper outlier boundary. Is 40 an outlier?</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(2)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-2">Q3 + 1.5·IQR = 15 + 1.5(8) = 15 + 12 = 27. Since 40 &gt; 27, yes — 40 is an outlier.</div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q4.</span> A line of best fit is ŷ = 1.5x + 4. Predict y when x = 6.</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(3)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-3">ŷ = 1.5(6) + 4 = 9 + 4 = 13</div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q5.</span> For ŷ = 1.5x + 4 (x = hours studied, y = test score), interpret the slope in context.</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(4)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-4">Each additional hour studied predicts about a 1.5-point increase in test score.</div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-q"><span class="sa-num">Q6.</span> Of 50 students surveyed, 30 like soccer. Find the conditional relative frequency of liking soccer.</div>
+        <button class="sa-reveal-btn" onclick="stRevealSA(5)">Show Answer</button>
+        <div class="sa-answer" id="st-sa-5">30 / 50 = 0.6 = 60%</div>
+      </div>
+    </div>
+
     <!-- ── TAB 7: SELF-QUIZ ── -->
     <div class="tab-content" id="alg1-selfquiz">
       <h2 class="alg-section-title">✅ Quick Self-Quiz</h2>
@@ -3832,6 +4054,121 @@
     }
   });
 
+  /* ════════════════════════════════════════
+     REGENTS ALGEBRA — STATISTICS TAB
+  ════════════════════════════════════════ */
+  // ── Vocabulary flashcards ──────────────
+  const ST_FC = [
+  [`Mean`, `The average — add all the values and divide by how many there are.`],
+  [`Median`, `The middle value when data is ordered (also Q2 / the 50th percentile).`],
+  [`Mode`, `The value that appears most often in a data set.`],
+  [`Range`, `Maximum − minimum. A simple measure of total spread.`],
+  [`Interquartile Range (IQR)`, `Q3 − Q1. The spread of the middle 50% of the data.`],
+  [`Standard Deviation`, `How far the data typically falls from the mean. Larger = more spread out.`],
+  [`Five-Number Summary`, `Min, Q1, Median, Q3, Max — the values used to draw a box plot.`],
+  [`Outlier`, `A value far from the rest: below Q1 − 1.5·IQR or above Q3 + 1.5·IQR.`],
+  [`Correlation`, `The direction & strength of a relationship: positive, negative, or none.`],
+  [`Correlation Coefficient (r)`, `A number from −1 to 1. Near ±1 = strong linear fit; near 0 = weak.`],
+  [`Line of Best Fit`, `The line that best models a scatter plot's trend: ŷ = ax + b.`],
+  [`Regression`, `Using data (often a calculator) to find the equation of the best-fit line.`],
+  [`Residual`, `Actual y − Predicted y. Positive = point above the line; negative = below it.`],
+  [`Residual Plot`, `A plot of the residuals. Random scatter ⇒ a linear model is appropriate.`],
+  [`Interpolation`, `Predicting a value WITHIN the range of the data — generally reliable.`],
+  [`Extrapolation`, `Predicting a value OUTSIDE the range of the data — less reliable.`],
+  [`Marginal Frequency`, `A row total or column total (the margins) of a two-way table.`],
+  [`Conditional Relative Frequency`, `A joint frequency divided by a row or column total (a conditional probability).`]
+  ];
+  let stFCOrder = ST_FC.map((_, i) => i);
+  let stFCIdx = 0;
+  let stFCFlipped = false;
+
+  function stSetCard(idx) {
+    stFCIdx = idx;
+    stFCFlipped = false;
+    const inner = document.getElementById('st-fc-inner');
+    if (inner) inner.classList.remove('flipped');
+    const n = stFCOrder[idx];
+    const ft = document.getElementById('st-fc-front-text');
+    const bt = document.getElementById('st-fc-back-text');
+    const ctr = document.getElementById('st-fc-counter');
+    if (ft) ft.textContent = ST_FC[n][0];
+    if (bt) bt.textContent = ST_FC[n][1];
+    if (ctr) ctr.textContent = 'Card ' + (idx + 1) + ' of ' + ST_FC.length;
+    document.querySelectorAll('.st-fc-dot').forEach((d, di) => {
+      d.classList.toggle('active', di === idx);
+    });
+  }
+  function stFlipCard() {
+    const inner = document.getElementById('st-fc-inner');
+    if (!inner) return;
+    stFCFlipped = !stFCFlipped;
+    inner.classList.toggle('flipped', stFCFlipped);
+  }
+  function stNextCard() { stSetCard((stFCIdx + 1) % ST_FC.length); }
+  function stPrevCard() { stSetCard((stFCIdx - 1 + ST_FC.length) % ST_FC.length); }
+  function stGotoCard(i) { stSetCard(i); }
+  function stShuffleCards() {
+    for (let i = stFCOrder.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [stFCOrder[i], stFCOrder[j]] = [stFCOrder[j], stFCOrder[i]];
+    }
+    stSetCard(0);
+  }
+
+  // ── MCQ Quiz (out of 12) ───────────────
+  let stScore = 0;
+  const stAnswered = new Set();
+
+  function stCheckMCQ(qIdx, chosen, correct, explanation) {
+    if (stAnswered.has(qIdx)) return;
+    stAnswered.add(qIdx);
+
+    ['A','B','C','D'].forEach(ch => {
+      const btn = document.getElementById('st-mcq-' + qIdx + '-' + ch);
+      if (!btn) return;
+      btn.disabled = true;
+      if (ch === correct) btn.classList.add(chosen === correct ? 'correct' : 'reveal');
+      else if (ch === chosen) btn.classList.add('wrong');
+    });
+
+    const exp = document.getElementById('st-mcq-exp-' + qIdx);
+    if (exp) {
+      const icon = chosen === correct ? '✅' : '❌';
+      const label = chosen === correct ? 'Correct!' : 'Incorrect.';
+      exp.innerHTML = icon + ' <strong>' + label + '</strong> ' + explanation;
+      exp.classList.add('show');
+    }
+
+    if (chosen === correct) {
+      stScore++;
+      const el = document.getElementById('st-score');
+      if (el) el.textContent = stScore;
+    }
+  }
+
+  function stResetQuiz() {
+    stScore = 0;
+    stAnswered.clear();
+    const el = document.getElementById('st-score');
+    if (el) el.textContent = '0';
+    document.querySelectorAll('#alg1-statistics .st-mcq-choice').forEach(b => {
+      b.disabled = false;
+      b.classList.remove('correct','wrong','reveal');
+    });
+    document.querySelectorAll('#alg1-statistics .st-mcq-explain').forEach(e => {
+      e.classList.remove('show');
+      e.innerHTML = '';
+    });
+  }
+
+  // ── Short Answer reveals ───────────────
+  function stRevealSA(i) {
+    const el = document.getElementById('st-sa-' + i);
+    if (!el) return;
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    if (btn) btn.textContent = el.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+  }
 
   /* ════════════════════════════════════════
      ISLAMIC STUDIES — INTERACTIVE
